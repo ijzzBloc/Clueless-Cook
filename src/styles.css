@@ -12,7 +12,7 @@
     list-style: none;
     font-family: 'Poppins', sans-serif;
     --darkcolor:    hsl(227, 36%, 27%);
-    --lightcolor:   hsl(208, 40%, 49%);
+    --lightcolor:   hsl(204, 57%, 49%);
     background: var(--darkcolor);
     max-width: 100%;
 }
@@ -202,6 +202,10 @@ a   {
 }
 /*----------- Search results -------------------*/
 .searchresult-container {
+    min-height: 40vh;
+    background-color: whitesmoke;
+}
+.searchresult-inner-container {
     display: grid;
     grid-template-columns: repeat(3, 30%);
     grid-auto-rows: auto;
@@ -209,9 +213,12 @@ a   {
     justify-content: space-between;
     align-items: center;
     align-content: center;
-    min-height: 40vh;
+    min-height: inherit;
     margin-left: 20%;
     margin-right: 20%;
+    background-color: inherit;
+    padding-top: 3%;
+    padding-bottom: 3%;
 }
 /********************* Footer *********************/
 .footer-container   {
