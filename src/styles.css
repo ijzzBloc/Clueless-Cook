@@ -166,8 +166,15 @@ a   {
 }
 /*----------- Search results -------------------*/
 .searchresult-container {
+    display: grid;
+    grid-template-columns: repeat(3, 25%);
+    grid-auto-rows: auto;
+    grid-gap: 4rem;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-between;
     border: 1px red solid;
-    height: 50vh;
+    min-height: 40vh;
     margin-left: 20%;
     margin-right: 20%;
 }
@@ -175,10 +182,11 @@ a   {
     background: whitesmoke;
     border: 1px green solid;
     border-radius: 0.3rem;
-    width: 25%;
     margin: 0;
     overflow: hidden;
     font-size: 0.8em;
+    min-height: 200px;
+    min-width: 250px;
 }
 .card-header    {
     overflow: hidden;
