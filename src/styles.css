@@ -82,20 +82,21 @@ a   {
 }
 .slider-container   {
     position: relative;
-    bottom: 4rem;
-    border: red 1px solid;
+    bottom: 2.5rem;
     background: none;
     height:20vh;
 }
 .slider-inner-container {
     display: flex;
-    border: yellow 1px solid;
     margin-left: 20%;
     margin-right: 20%;
     height: inherit;
+    border-radius: 0.3rem;
+    background: none;
 }
 .slide  {
     border: black 1px solid;
+    border-radius: 0.3rem;
     width: 33.3%;
     background: url("./assets/images/cardplaceholder.jpg") no-repeat center / cover;
 }
@@ -103,6 +104,8 @@ a   {
     position: relative;
     top: 81%;
     background: whitesmoke;
+    padding: 0.6rem;
+    border-radius: 0.3rem;
 }
 .slide-text {
     background: whitesmoke;

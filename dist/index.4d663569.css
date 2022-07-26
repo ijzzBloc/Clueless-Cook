@@ -93,14 +93,14 @@ a {
 .slider-container {
   height: 20vh;
   background: none;
-  border: 1px solid red;
   position: relative;
-  bottom: 4rem;
+  bottom: 2.5rem;
 }
 
 .slider-inner-container {
   height: inherit;
-  border: 1px solid #ff0;
+  background: none;
+  border-radius: .3rem;
   margin-left: 20%;
   margin-right: 20%;
   display: flex;
@@ -110,10 +110,13 @@ a {
   width: 33.3%;
   background: url("cardplaceholder.18cf3e6f.jpg") center / cover no-repeat;
   border: 1px solid #000;
+  border-radius: .3rem;
 }
 
 .slide-content {
   background: #f5f5f5;
+  border-radius: .3rem;
+  padding: .6rem;
   position: relative;
   top: 81%;
 }
