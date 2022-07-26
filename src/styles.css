@@ -134,50 +134,33 @@ a   {
 }
 /*------------------- Image slider -------------------*/
 .slider-container   {
-    position: relative;
-    bottom: 2.5rem;
-    background: none;
-    height:20vh;
+    display: flex;
+    min-height: 20vh;
+    background-color: whitesmoke;
 }
 .slider-inner-container {
     display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    align-content: space-between;
+    min-height: inherit;
+    border: 1px red solid;
+    background-color: inherit;
+    width: 60%;
     margin-left: 20%;
     margin-right: 20%;
-    height: inherit;
-    border-radius: 0.3rem;
-    background: none;
-}
-.slide  {
-    border-radius: 0.3rem;
-    width: 33.3%;
-    background: url("./assets/images/cardplaceholder.jpg") no-repeat center / cover;
-}
-.slide-content  {
-    position: relative;
-    top: 81%;
-    background: whitesmoke;
-    padding: 0.6rem;
-    border-radius: 0.3rem;
-}
-.slide-text {
-    background: whitesmoke;
-}
-.fa-clock   {
-    color: black;
-    background: whitesmoke;
-}
-.slide:hover    {
 }
 /*------------------- Searchbar -------------------*/
 .searchbar-container    {
     display: flex;
-    min-height: 9vh;
+    min-height: 12vh;
 }
 .searchbar-inner-container  {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height: 9vh;
+    min-height: 12vh;
     width: 60%;
     margin-left: 20%;
     margin-right: 20%;
