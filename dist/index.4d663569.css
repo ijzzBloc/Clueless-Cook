@@ -242,13 +242,11 @@ a {
 .recipe-container {
   min-height: 90vh;
   background-color: #f5f5f5;
-  border: 1px solid red;
 }
 
 .recipe-inner-container {
   min-height: 100vh;
   background-color: #f5f5f5;
-  border: 1px solid #006400;
   grid-template-columns: repeat(2, 50%);
   margin-left: 20%;
   margin-right: 20%;
@@ -258,7 +256,6 @@ a {
 .details {
   color: var(--darkcolor);
   background-color: #f5f5f5;
-  border: 1px solid red;
 }
 
 .details-header {
@@ -296,7 +293,6 @@ a {
 
 .recipe-image {
   background-color: #f5f5f5;
-  border: 1px solid red;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -305,7 +301,6 @@ a {
 .instructions {
   color: var(--darkcolor);
   background-color: #f5f5f5;
-  border: 1px solid red;
 }
 
 .instructions-header {
@@ -324,7 +319,6 @@ a {
 
 .nutrients {
   background-color: #f5f5f5;
-  border: 1px solid red;
 }
 
 .nutrients-header, h4 {
@@ -339,16 +333,15 @@ a {
 
 .nutrients-table, tr, td {
   border-collapse: collapse;
-  min-width: 300px;
+  min-width: 15vw;
   color: #000;
   background-color: #f5f5f5;
   margin-top: 1rem;
-  margin-left: 2rem;
+  margin-left: 1rem;
 }
 
 .labels {
   background-color: #f5f5f5;
-  border: 1px solid red;
 }
 
 .labels-header {
