@@ -109,7 +109,6 @@ a {
 .slide {
   width: 33.3%;
   background: url("cardplaceholder.18cf3e6f.jpg") center / cover no-repeat;
-  border: 1px solid #000;
   border-radius: .3rem;
 }
 

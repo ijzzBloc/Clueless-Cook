@@ -95,7 +95,6 @@ a   {
     background: none;
 }
 .slide  {
-    border: black 1px solid;
     border-radius: 0.3rem;
     width: 33.3%;
     background: url("./assets/images/cardplaceholder.jpg") no-repeat center / cover;
