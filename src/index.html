@@ -47,14 +47,13 @@
                     <p class="slide-text">300 calories|10 ingredients&nbsp;<i class="fa-regular fa-clock"></i>&nbsp;20 mins.</p>
                 </div>
             </div>
-            </div>
         </section>
     </section>
     <section class="searchbar-container">
         <section class="searchbar-inner-container">
             <input type="text" class="search" placeholder="&#xf002">
             <label for="meal-type" class="dropdown">
-                <select name="meal-type" class="dropdown-selection">
+                <select name="meal-type" id="meal-type" class="dropdown-selection">
                     <option disabled selected>Meal Type</option>
                     <option value="a">a</option>
                     <option value="b">b</option>
@@ -62,7 +61,7 @@
                     <option value="d">d</option>
                 </select>
             </label>
-            <label for="cuisine" class="dropdown">
+            <label for="cuisine" id="cuisine" class="dropdown">
                 <select name="cuisine" class="dropdown-selection">
                     <option disabled selected>Cuisine</option>
                     <option value="a">a</option>
@@ -71,7 +70,7 @@
                     <option value="d">d</option>
                 </select>
             </label>
-            <label for="diet" class="dropdown">
+            <label for="diet" id="diet" class="dropdown">
                 <select name="diet" class="dropdown-selection">
                     <option disabled selected>Diet</option>
                     <option value="a">a</option>
@@ -80,7 +79,7 @@
                     <option value="d">d</option>
                 </select>
             </label>
-            <label for="time" class="dropdown">
+            <label for="time" id="time" class="dropdown">
                 <select name="time" class="dropdown-selection">
                     <option disabled selected>Time</option>
                     <option value="a">a</option>
@@ -102,7 +101,11 @@
             </div>
             <div class="card-body">
                 <p>Recipe name</p>
-                <p>300 calories|10 ingredients<i class="fa-solid fa-clock-rotate-left"></i>20 mins.</p>
+            </div>
+            <div class="card-footer">
+                <p>300 calories|10 ingredients</p>
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                <p>20 mins.</p>
             </div>
         </div>
     </section>

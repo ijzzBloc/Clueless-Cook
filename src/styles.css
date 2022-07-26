@@ -175,9 +175,10 @@ a   {
     background: whitesmoke;
     border: 1px green solid;
     border-radius: 0.3rem;
-    width: 30%;
+    width: 25%;
     margin: 0;
     overflow: hidden;
+    font-size: 0.8em;
 }
 .card-header    {
     overflow: hidden;
@@ -195,7 +196,19 @@ a   {
 }
 .card-body > p  {
     padding-left: 1em;
+    background: whitesmoke;
+}
+.card-footer    {
+    display: inline-flex;
+    padding-left: 1em;
     margin-bottom: 0.3rem;
+    background: whitesmoke;
+}
+.card-footer > i   {
+    margin-left: 4vw;
+    background: whitesmoke;
+}
+.card-footer > p    {
     background: whitesmoke;
 }
 .card:hover  {

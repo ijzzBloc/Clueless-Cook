@@ -187,11 +187,12 @@ a {
 }
 
 .card {
-  width: 30%;
+  width: 25%;
   background: #f5f5f5;
   border: 1px solid green;
   border-radius: .3rem;
   margin: 0;
+  font-size: .8em;
   overflow: hidden;
 }
 
@@ -214,8 +215,23 @@ a {
 
 .card-body > p {
   background: #f5f5f5;
+  padding-left: 1em;
+}
+
+.card-footer {
+  background: #f5f5f5;
   margin-bottom: .3rem;
   padding-left: 1em;
+  display: inline-flex;
+}
+
+.card-footer > i {
+  background: #f5f5f5;
+  margin-left: 4vw;
+}
+
+.card-footer > p {
+  background: #f5f5f5;
 }
 
 .card:hover {
