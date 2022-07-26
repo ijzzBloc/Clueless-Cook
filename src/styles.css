@@ -84,6 +84,54 @@ a   {
 .random-recipes-bttn:hover {
     cursor: pointer;
 }
+/*------------------- Card -------------------*/
+.card   {
+    background: whitesmoke;
+    border-radius: 0.3rem;
+    margin: 0;
+    overflow: hidden;
+    font-size: 0.8em;
+    min-height: 200px;
+    min-width: 200px;
+    max-width: 600px;
+    border: rgb(0, 0, 0 ,30%) 1px solid;
+
+}
+.card-header    {
+    overflow: hidden;
+    margin-bottom: 0.3rem;
+}
+.card-header.card-image > img    {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center;
+}
+.card-body  {
+    background-color: whitesmoke;
+}
+.card-body > p  {
+    padding-left: 1em;
+    background: whitesmoke;
+}
+.card-footer    {
+    display: inline-flex;
+    padding-left: 1em;
+    margin-bottom: 0.3rem;
+    background: whitesmoke;
+}
+.card-footer > i   {
+    margin-left: 6.5vw;
+    background: whitesmoke;
+}
+.card-footer > p    {
+    background: whitesmoke;
+}
+.card:hover  {
+    transition: 0.5s;
+    transform: scale(120%);
+}
 /*------------------- Image slider -------------------*/
 .slider-container   {
     position: relative;
@@ -181,53 +229,6 @@ a   {
     min-height: 40vh;
     margin-left: 20%;
     margin-right: 20%;
-}
-.card   {
-    background: whitesmoke;
-    border-radius: 0.3rem;
-    margin: 0;
-    overflow: hidden;
-    font-size: 0.8em;
-    min-height: 200px;
-    min-width: 200px;
-    max-width: 600px;
-    border: rgb(0, 0, 0 ,30%) 1px solid;
-
-}
-.card-header    {
-    overflow: hidden;
-    margin-bottom: 0.3rem;
-}
-.card-header.card-image > img    {
-    display: block;
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-    object-position: center;
-}
-.card-body  {
-    background-color: whitesmoke;
-}
-.card-body > p  {
-    padding-left: 1em;
-    background: whitesmoke;
-}
-.card-footer    {
-    display: inline-flex;
-    padding-left: 1em;
-    margin-bottom: 0.3rem;
-    background: whitesmoke;
-}
-.card-footer > i   {
-    margin-left: 6.5vw;
-    background: whitesmoke;
-}
-.card-footer > p    {
-    background: whitesmoke;
-}
-.card:hover  {
-    transition: 0.5s;
-    transform: scale(120%);
 }
 /********************* Footer *********************/
 .footer-container   {
