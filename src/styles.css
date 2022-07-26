@@ -12,6 +12,7 @@
     list-style: none;
     font-family: 'Poppins', sans-serif;
     background: darkslateblue;
+    max-width: 100%;
 }
 /********************* Header *********************/
 .header-container  {
@@ -74,9 +75,9 @@ a   {
     width: 8rem;
     height: 2rem;
     background-color: dodgerblue;
-    border-style: hidden;
+    border: rgb(0, 0, 0 ,30%) 1px solid;
     border-radius: 0.3rem;
-    margin-top: 2rem;
+    margin-top: 4rem;
 }
 .random-recipes-bttn:hover {
     cursor: pointer;
@@ -138,7 +139,7 @@ a   {
     height: 3vh;
     border-radius: 0.3rem;
     background: whitesmoke;
-    border: rgb(0, 0, 0 ,30%) 2px solid;
+    border: rgb(0, 0, 0 ,30%) 1px solid;
 }
 .dropdown   {
 }
@@ -148,7 +149,7 @@ a   {
     padding-left: 10%;
     border-radius: 0.3rem;
     background: whitesmoke;
-    border: rgb(0, 0, 0 ,30%) 2px solid;
+    border: rgb(0, 0, 0 ,30%) 1px solid;
 }
 .searh-bttn {
     display: flex;
@@ -158,12 +159,48 @@ a   {
     height: 3vh;
     border-radius: 0.3rem;
     background: dodgerblue;
-    border: rgb(0, 0, 0 ,30%) 2px solid;
+    border: rgb(0, 0, 0 ,30%) 1px solid;
 }
 .searh-bttn > p, i {
     background: dodgerblue;
 }
 /*----------- Search results -------------------*/
+.searchresult-container {
+    border: 1px red solid;
+    height: 50vh;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.card   {
+    background: whitesmoke;
+    border: 1px green solid;
+    border-radius: 0.3rem;
+    width: 30%;
+    margin: 0;
+    overflow: hidden;
+}
+.card-header    {
+    overflow: hidden;
+    margin-bottom: 0.3rem;
+}
+.card-header.card-image > img    {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center;
+}
+.card-body  {
+    background-color: whitesmoke;
+}
+.card-body > p  {
+    padding-left: 1em;
+    margin-bottom: 0.3rem;
+    background: whitesmoke;
+}
+.card:hover  {
+    transform: scale(120%);
+}
 /********************* Footer *********************/
 .footer-container   {
     display: flex;

@@ -7,6 +7,7 @@
 
 * {
   box-sizing: border-box;
+  max-width: 100%;
   background: #483d8b;
   margin: 0;
   padding: 0;
@@ -81,9 +82,9 @@ a {
   width: 8rem;
   height: 2rem;
   background-color: #1e90ff;
-  border-style: hidden;
+  border: 1px solid #0000004d;
   border-radius: .3rem;
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
 
 .random-recipes-bttn:hover {
@@ -149,7 +150,7 @@ a {
   width: 20%;
   height: 3vh;
   background: #f5f5f5;
-  border: 2px solid #0000004d;
+  border: 1px solid #0000004d;
   border-radius: .3rem;
   font-family: FontAwesome;
 }
@@ -158,7 +159,7 @@ a {
   width: 8vw;
   height: 3vh;
   background: #f5f5f5;
-  border: 2px solid #0000004d;
+  border: 1px solid #0000004d;
   border-radius: .3rem;
   padding-left: 10%;
 }
@@ -167,7 +168,7 @@ a {
   width: 8vw;
   height: 3vh;
   background: #1e90ff;
-  border: 2px solid #0000004d;
+  border: 1px solid #0000004d;
   border-radius: .3rem;
   justify-content: space-evenly;
   align-items: center;
@@ -176,6 +177,49 @@ a {
 
 .searh-bttn > p, i {
   background: #1e90ff;
+}
+
+.searchresult-container {
+  height: 50vh;
+  border: 1px solid red;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.card {
+  width: 30%;
+  background: #f5f5f5;
+  border: 1px solid green;
+  border-radius: .3rem;
+  margin: 0;
+  overflow: hidden;
+}
+
+.card-header {
+  margin-bottom: .3rem;
+  overflow: hidden;
+}
+
+.card-header.card-image > img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.card-body {
+  background-color: #f5f5f5;
+}
+
+.card-body > p {
+  background: #f5f5f5;
+  margin-bottom: .3rem;
+  padding-left: 1em;
+}
+
+.card:hover {
+  transform: scale(1.2);
 }
 
 .footer-container {
