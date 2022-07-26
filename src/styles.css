@@ -145,12 +145,15 @@ a   {
     align-items: center;
     align-content: space-between;
     min-height: inherit;
-    border: 1px red solid;
     background-color: inherit;
     width: 60%;
     margin-left: 20%;
     margin-right: 20%;
 }
+/*.card-1, .card-2, .card-3 {
+    position: relative;
+    bottom: 3vh;
+}*/
 /*------------------- Searchbar -------------------*/
 .searchbar-container    {
     display: flex;

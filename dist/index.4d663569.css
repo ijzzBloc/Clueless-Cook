@@ -158,7 +158,6 @@ a {
   min-height: inherit;
   background-color: inherit;
   width: 60%;
-  border: 1px solid red;
   place-content: space-between;
   place-items: center;
   margin-left: 20%;
