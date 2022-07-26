@@ -9,7 +9,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    list-style: none;
     font-family: 'Poppins', sans-serif;
     --darkcolor:    hsl(227, 36%, 27%);
     --lightcolor:   hsl(204, 57%, 49%);
@@ -224,6 +223,107 @@ a   {
     background-color: inherit;
     padding-top: 3%;
     padding-bottom: 3%;
+}
+/********************* Recipe-detail.html *********************/
+.recipe-container  {
+    border: 1px red solid;
+    min-height: 90vh;
+    background-color: whitesmoke;
+}
+.recipe-inner-container    {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    border: 1px darkgreen solid;
+    margin-right: 20%;
+    margin-left: 20%;
+    min-height: 100vh;
+    background-color: whitesmoke;
+}
+.details    {
+    border: 1px red solid;
+    background-color: whitesmoke;
+    color: var(--darkcolor);
+}
+.details-header {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 1rem;
+    background-color: inherit;
+    color: inherit;
+}
+.details-header > p, h3 {
+    margin-top: 1rem;
+    background-color: inherit;
+    color: inherit;
+}
+.details-header > i {
+    margin-top: 1.1rem;
+    margin-left: 5rem;
+    background-color: inherit;
+    color: inherit;
+}
+.recipe-text    {
+    margin-left: 1rem;
+    background-color: inherit;
+    color: inherit;
+}
+.recipe-text > p    {
+    margin-top: 1rem;
+    background-color: inherit;
+    color: inherit;
+}
+.recipe-image   {
+    display: flex;
+    border: 1px red solid;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+}
+.instructions   {
+    border: 1px red solid;
+    background-color: whitesmoke;
+    color: var(--darkcolor);
+}
+.instructions-header    {
+    margin-left: 1rem;
+    margin-top: 1rem;
+    background-color: inherit;
+    color: inherit;
+}
+.instructions-header > ul, li  {
+    margin-left: 2rem;
+    margin-top: 1rem;
+    background-color: inherit;
+    color: inherit;
+}
+.nutrients  {
+    border: 1px red solid;
+    background-color: whitesmoke;
+}
+.nutrients-header, h4   {
+    margin-top: 1rem;
+    background-color: whitesmoke;
+    color: var(--darkcolor);
+}
+.nutrients-header > h4 {
+    margin-left: 1rem;
+}
+.nutrients-table, tr, td  {
+    border-collapse: collapse;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    min-width: 300px;
+    background-color: whitesmoke;
+    color: black;
+}
+.labels {
+    border: 1px red solid;
+    background-color: whitesmoke;
+}
+.labels-header  {
+    margin-left: 1rem;
+    background-color: inherit;
+    color: var(--darkcolor);
 }
 /********************* Footer *********************/
 .footer-container   {
