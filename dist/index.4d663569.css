@@ -6,7 +6,8 @@
 }
 
 * {
-  background-color: #483d8b;
+  box-sizing: border-box;
+  background: #483d8b;
   margin: 0;
   padding: 0;
   font-family: Poppins, sans-serif;
@@ -87,6 +88,43 @@ a {
 
 .random-recipes-bttn:hover {
   cursor: pointer;
+}
+
+.slider-container {
+  height: 20vh;
+  background: none;
+  border: 1px solid red;
+  position: relative;
+  bottom: 4rem;
+}
+
+.slider-inner-container {
+  height: inherit;
+  border: 1px solid #ff0;
+  margin-left: 20%;
+  margin-right: 20%;
+  display: flex;
+}
+
+.slide {
+  width: 33.3%;
+  background: url("cardplaceholder.18cf3e6f.jpg") center / cover no-repeat;
+  border: 1px solid #000;
+}
+
+.slide-content {
+  background: #f5f5f5;
+  position: relative;
+  top: 81%;
+}
+
+.slide-text {
+  background: #f5f5f5;
+}
+
+.fa-clock {
+  color: #000;
+  background: #f5f5f5;
 }
 
 .footer-container {
