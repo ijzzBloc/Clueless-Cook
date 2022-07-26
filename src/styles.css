@@ -11,7 +11,9 @@
     box-sizing: border-box;
     list-style: none;
     font-family: 'Poppins', sans-serif;
-    background: darkslateblue;
+    --darkcolor:    hsl(227, 36%, 27%);
+    --lightcolor:   hsl(208, 40%, 49%);
+    background: var(--darkcolor);
     max-width: 100%;
 }
 /********************* Header *********************/
@@ -33,7 +35,7 @@
     font-family: 'Austein', sans-serif;
     font-style: italic;
     font-size: 2rem;
-    color: darkslateblue;
+    color: var(--darkcolor);
     margin-left: 20%;
 }
 .header-item-2 {
@@ -74,7 +76,7 @@ a   {
 .random-recipes-bttn    {
     width: 8rem;
     height: 2rem;
-    background-color: dodgerblue;
+    background-color: var(--lightcolor);
     border: rgb(0, 0, 0 ,30%) 1px solid;
     border-radius: 0.3rem;
     margin-top: 4rem;
@@ -151,6 +153,9 @@ a   {
     background: whitesmoke;
     border: rgb(0, 0, 0 ,30%) 1px solid;
 }
+.dropdown-selection > option    {
+    background-color: whitesmoke;
+}
 .searh-bttn {
     display: flex;
     justify-content: space-evenly;
@@ -158,11 +163,11 @@ a   {
     width: 8vw;
     height: 3vh;
     border-radius: 0.3rem;
-    background: dodgerblue;
+    background: var(--lightcolor);
     border: rgb(0, 0, 0 ,30%) 1px solid;
 }
 .searh-bttn > p, i {
-    background: dodgerblue;
+    background: var(--lightcolor);
 }
 /*----------- Search results -------------------*/
 .searchresult-container {
@@ -173,14 +178,12 @@ a   {
     justify-content: space-between;
     align-items: center;
     align-content: center;
-    border: 1px red solid;
     min-height: 40vh;
     margin-left: 20%;
     margin-right: 20%;
 }
 .card   {
     background: whitesmoke;
-    border: 1px green solid;
     border-radius: 0.3rem;
     margin: 0;
     overflow: hidden;
@@ -188,6 +191,8 @@ a   {
     min-height: 200px;
     min-width: 200px;
     max-width: 600px;
+    border: rgb(0, 0, 0 ,30%) 1px solid;
+
 }
 .card-header    {
     overflow: hidden;
@@ -221,24 +226,29 @@ a   {
     background: whitesmoke;
 }
 .card:hover  {
+    transition: 0.5s;
     transform: scale(120%);
 }
 /********************* Footer *********************/
 .footer-container   {
     display: flex;
     flex-direction: row;
-    margin-top: 1.5rem;
+    margin-top: 4.5rem;
     margin-left: 25%;
     margin-right: 25%;
     justify-content: space-between;
 }
 .footer-title   {
-    color: dodgerblue;
+    color: var(--lightcolor);
 }
 .footer-item    {
     color: whitesmoke;
 }
 .fa-brands  {
-    color: dodgerblue;
+    color: var(--lightcolor);
     width: 3rem;
+}
+.fa-brands:hover    {
+    transition: 0.5s;
+    transform: scale(150%);
 }
