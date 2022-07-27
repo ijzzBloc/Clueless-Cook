@@ -72,7 +72,7 @@
     </section>
     <section class="searchbar-container">
         <section class="searchbar-inner-container">
-            <input type="text" class="search" placeholder="&#xf002">
+            <input type="text" class="search" name="search" id="search" placeholder="&#xf002" autocomplete="off">
             <label for="meal-type" class="dropdown">
                 <select name="meal-type" id="meal-type" class="dropdown-selection">
                     <option disabled selected>Meal Type</option>
@@ -109,7 +109,7 @@
                     <option value="d">d</option>
                 </select>
             </label>
-            <button type="button" class="searh-bttn">
+            <button type="button" class="searh-bttn" id="search-bttn">
                 <p>Search</p>
                 <i class="fa-solid fa-arrow-right-long"></i>
             </button>
@@ -233,5 +233,6 @@
     </section>
 </footer>
 <script type="module" src="main.js"></script>
+<script type="module" src="homepage.js"></script>
 </body>
 </html>
