@@ -82,6 +82,7 @@ a   {
 }
 .random-recipes-bttn:hover {
     cursor: pointer;
+    background-color: hsl(204, 57%, 59%);
 }
 /*------------------- Card -------------------*/
 .card   {
@@ -203,6 +204,11 @@ a   {
 }
 .searh-bttn > p, i {
     background: var(--lightcolor);
+    font-size: 1.1em;
+}
+.searh-bttn:hover, .searh-bttn:hover > p, .searh-bttn:hover > i  {
+    background-color: hsl(204, 57%, 59%);
+    cursor: pointer;
 }
 /*----------- Search results -------------------*/
 .searchresult-container {
@@ -340,4 +346,5 @@ a   {
 .fa-brands:hover    {
     transition: 0.5s;
     transform: scale(150%);
+    color: hsl(204, 57%, 59%);
 }

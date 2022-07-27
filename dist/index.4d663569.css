@@ -90,6 +90,7 @@ a {
 
 .random-recipes-bttn:hover {
   cursor: pointer;
+  background-color: #5ba2d2;
 }
 
 .card {
@@ -217,6 +218,12 @@ a {
 
 .searh-bttn > p, i {
   background: var(--lightcolor);
+  font-size: 1.1em;
+}
+
+.searh-bttn:hover, .searh-bttn:hover > p, .searh-bttn:hover > i {
+  cursor: pointer;
+  background-color: #5ba2d2;
 }
 
 .searchresult-container {
@@ -373,6 +380,7 @@ a {
 }
 
 .fa-brands:hover {
+  color: #5ba2d2;
   transition: all .5s;
   transform: scale(1.5);
 }
