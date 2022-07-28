@@ -29,6 +29,104 @@
     </section>
     <section class="slider-container">
         <section class="slider-inner-container">
+            <div class="card card-a">
+                <div     class="card-header card-image">
+                    <img src="./assets/images/cardplaceholder.jpg" alt="">
+                </div>
+                <div class="card-body">
+                    <p>Recipe name</p>
+                </div>
+                <div class="card-footer">
+                    <p>300 calories&nbsp;|&nbsp;10 ingredients</p>
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    <p>&nbsp;&nbsp;20 mins.</p>
+                </div>
+            </div>
+            <div class="card card-b">
+                <div     class="card-header card-image">
+                    <img src="./assets/images/cardplaceholder.jpg" alt="">
+                </div>
+                <div class="card-body">
+                    <p>Recipe name</p>
+                </div>
+                <div class="card-footer">
+                    <p>300 calories&nbsp;|&nbsp;10 ingredients</p>
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    <p>&nbsp;&nbsp;20 mins.</p>
+                </div>
+            </div>
+            <div class="card card-c">
+                <div     class="card-header card-image">
+                    <img src="./assets/images/cardplaceholder.jpg" alt="">
+                </div>
+                <div class="card-body">
+                    <p>Recipe name</p>
+                </div>
+                <div class="card-footer">
+                    <p>300 calories&nbsp;|&nbsp;10 ingredients</p>
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    <p>&nbsp;&nbsp;20 mins.</p>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="searchbar-container">
+        <section class="searchbar-inner-container">
+            <input type="text" class="search" name="search" id="search" placeholder="&#xf002" autocomplete="off">
+            <label for="meal-type" class="dropdown">
+                <select name="meal-type" id="meal-type" class="dropdown-selection">
+                    <option disabled selected>Meal Type</option>
+                    <option value="all">All</option>
+                    <option value="breakfast">Breakfast</option>
+                    <option value="lunch">Lunch</option>
+                    <option value="dinner">Dinner</option>
+                    <option value="snack">Snack</option>
+                    <option value="tea-time">Tea time</option>
+                </select>
+            </label>
+            <label for="cuisine" id="cuisine" class="dropdown">
+                <select name="cuisine" class="dropdown-selection">
+                    <option disabled selected>Cuisine</option>
+                    <option value="all">All</option>
+                    <option value="centraleurope">Central europe</option>
+                    <option value="asian">Asian</option>
+                    <option value="indian">Indian</option>
+                    <option value="mediterranean">Meditteranean</option>
+                    <option value="mideastern">Middle eastern</option>
+                </select>
+            </label>
+            <label for="diet" id="diet" class="dropdown">
+                <select name="diet" class="dropdown-selection">
+                    <option disabled selected>Diet</option>
+                    <option value="all">All</option>
+                    <option value="balanced">Balanced</option>
+                    <option value="highfiber">High-fiber</option>
+                    <option value="highprotein">High-protein</option>
+                    <option value="lowcarb">Low-carb</option>
+                    <option value="lowfat">Low-fat</option>
+                    <option value="lowsodium">Low-sodium</option>
+                </select>
+            </label>
+            <label for="time" id="time" class="dropdown">
+                <select name="time" class="dropdown-selection">
+                    <option disabled selected>Time</option>
+                    <option value="all">All</option>
+                    <option value="10m">10 m</option>
+                    <option value="20m">20 m</option>
+                    <option value="30m">30 m</option>
+                    <option value="45m">45 m</option>
+                    <option value="60m">60 m</option>
+                    <option value="60m+">60+ m</option>
+                </select>
+            </label>
+            <button type="button" class="searh-bttn" id="search-bttn">
+                <p>Search</p>
+                <i class="fa-solid fa-arrow-right-long"></i>
+            </button>
+        </section>
+    </section>
+    <section class="searchresult-container">
+        <section class="searchresult-inner-container">
             <div class="card card-1">
                 <div     class="card-header card-image">
                     <img src="./assets/images/cardplaceholder.jpg" alt="">
@@ -68,55 +166,6 @@
                     <p>&nbsp;&nbsp;20 mins.</p>
                 </div>
             </div>
-        </section>
-    </section>
-    <section class="searchbar-container">
-        <section class="searchbar-inner-container">
-            <input type="text" class="search" name="search" id="search" placeholder="&#xf002" autocomplete="off">
-            <label for="meal-type" class="dropdown">
-                <select name="meal-type" id="meal-type" class="dropdown-selection">
-                    <option disabled selected>Meal Type</option>
-                    <option value="all">All</option>
-                    <option value="b">b</option>
-                    <option value="c">c</option>
-                    <option value="d">d</option>
-                </select>
-            </label>
-            <label for="cuisine" id="cuisine" class="dropdown">
-                <select name="cuisine" class="dropdown-selection">
-                    <option disabled selected>Cuisine</option>
-                    <option value="all">All</option>
-                    <option value="b">b</option>
-                    <option value="c">c</option>
-                    <option value="d">d</option>
-                </select>
-            </label>
-            <label for="diet" id="diet" class="dropdown">
-                <select name="diet" class="dropdown-selection">
-                    <option disabled selected>Diet</option>
-                    <option value="all">All</option>
-                    <option value="b">b</option>
-                    <option value="c">c</option>
-                    <option value="d">d</option>
-                </select>
-            </label>
-            <label for="time" id="time" class="dropdown">
-                <select name="time" class="dropdown-selection">
-                    <option disabled selected>Time</option>
-                    <option value="all">All</option>
-                    <option value="b">b</option>
-                    <option value="c">c</option>
-                    <option value="d">d</option>
-                </select>
-            </label>
-            <button type="button" class="searh-bttn" id="search-bttn">
-                <p>Search</p>
-                <i class="fa-solid fa-arrow-right-long"></i>
-            </button>
-        </section>
-    </section>
-    <section class="searchresult-container">
-        <section class="searchresult-inner-container">
             <div class="card card-4">
                 <div     class="card-header card-image">
                     <img src="./assets/images/cardplaceholder.jpg" alt="">
@@ -144,45 +193,6 @@
                 </div>
             </div>
             <div class="card card-6">
-                <div     class="card-header card-image">
-                    <img src="./assets/images/cardplaceholder.jpg" alt="">
-                </div>
-                <div class="card-body">
-                    <p>Recipe name</p>
-                </div>
-                <div class="card-footer">
-                    <p>300 calories&nbsp;|&nbsp;10 ingredients</p>
-                    <i class="fa-solid fa-clock-rotate-left"></i>
-                    <p>&nbsp;&nbsp;20 mins.</p>
-                </div>
-            </div>
-            <div class="card card-7">
-                <div     class="card-header card-image">
-                    <img src="./assets/images/cardplaceholder.jpg" alt="">
-                </div>
-                <div class="card-body">
-                    <p>Recipe name</p>
-                </div>
-                <div class="card-footer">
-                    <p>300 calories&nbsp;|&nbsp;10 ingredients</p>
-                    <i class="fa-solid fa-clock-rotate-left"></i>
-                    <p>&nbsp;&nbsp;20 mins.</p>
-                </div>
-            </div>
-            <div class="card card-8">
-                <div     class="card-header card-image">
-                    <img src="./assets/images/cardplaceholder.jpg" alt="">
-                </div>
-                <div class="card-body">
-                    <p>Recipe name</p>
-                </div>
-                <div class="card-footer">
-                    <p>300 calories&nbsp;|&nbsp;10 ingredients</p>
-                    <i class="fa-solid fa-clock-rotate-left"></i>
-                    <p>&nbsp;&nbsp;20 mins.</p>
-                </div>
-            </div>
-            <div class="card card-9">
                 <div     class="card-header card-image">
                     <img src="./assets/images/cardplaceholder.jpg" alt="">
                 </div>

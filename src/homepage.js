@@ -1,7 +1,7 @@
-
-import  {
+import {
     fetchData
 } from "./main";
+
 
 let userInput = document.getElementById('search');
 let searchSubmit = document.getElementById('search-bttn')

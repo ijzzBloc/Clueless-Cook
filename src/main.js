@@ -1,4 +1,5 @@
 require('dotenv').config()
+import axios from 'axios';
 const axios = require('axios').default;
 
 //********************-********************//
@@ -21,13 +22,3 @@ export async function fetchData(query) {
         console.log(e)
     }
 }
-
-
-
-
-
-
-
-
-
-

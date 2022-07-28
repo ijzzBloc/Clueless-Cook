@@ -150,10 +150,6 @@ a   {
     margin-left: 20%;
     margin-right: 20%;
 }
-/*.card-1, .card-2, .card-3 {
-    position: relative;
-    bottom: 3vh;
-}*/
 /*------------------- Searchbar -------------------*/
 .searchbar-container    {
     display: flex;
