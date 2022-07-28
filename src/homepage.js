@@ -5,5 +5,5 @@ import {
 let userInput = document.getElementById('search');
 let searchSubmit = document.getElementById('search-bttn')
 searchSubmit.addEventListener('click', () => {
-    fetchData(userInput.value)
+    fetchData(userInput.value.data[0.])
 })

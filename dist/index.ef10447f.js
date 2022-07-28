@@ -536,7 +536,7 @@ var _main = require("./main");
 let userInput = document.getElementById("search");
 let searchSubmit = document.getElementById("search-bttn");
 searchSubmit.addEventListener("click", ()=>{
-    (0, _main.fetchData)(userInput.value);
+    (0, _main.fetchData)(userInput.value.data[0.]);
 });
 
 },{"./main":"gLLPy"}]},["c619H","c7psz"], "c7psz", "parcelRequire549b")

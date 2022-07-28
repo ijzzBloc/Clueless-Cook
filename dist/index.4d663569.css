@@ -9,7 +9,6 @@
   box-sizing: border-box;
   --darkcolor: #2c375e;
   --lightcolor: #368bc4;
-  background: var(--darkcolor);
   max-width: 100%;
   margin: 0;
   padding: 0;
@@ -449,9 +448,15 @@ a {
 }
 
 .footer-container {
+  width: 100vw;
+  background-color: var(--darkcolor);
+  padding-bottom: 1rem;
+}
+
+.footer-inner-container {
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 4.5rem;
+  margin-top: 3rem;
   margin-left: 25%;
   margin-right: 25%;
   display: flex;
