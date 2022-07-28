@@ -389,6 +389,7 @@ a {
   height: 75vh;
   background-color: #f5f5f5;
   border: 1px solid red;
+  display: flex;
 }
 
 .kcal-inner-container {
@@ -412,20 +413,39 @@ a {
 }
 
 .kcal-servings {
-  justify-content: space-evenly;
+  justify-content: flex-start;
+  gap: 3vw;
   display: flex;
 }
 
-.kcal-servings, p, input {
+.kcal-servings, input {
   background-color: #f5f5f5;
+}
+
+.kcal-servings > p {
+  background-color: inherit;
 }
 
 .kcal-servings > button {
   background-color: var(--lightcolor);
 }
 
-.kcal-info-table, .kcal-results tr, td {
+.kcal-info-table > table {
   border-collapse: collapse;
+  color: #000;
+  background-color: #f5f5f5;
+  margin-top: 1rem;
+}
+
+.kcal-results {
+  background-color: #f5f5f5;
+}
+
+.kcal-results > table {
+  border-collapse: collapse;
+  color: #000;
+  background-color: #f5f5f5;
+  margin-top: 1rem;
 }
 
 .footer-container {

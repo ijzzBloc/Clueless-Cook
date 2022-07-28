@@ -348,6 +348,7 @@ a   {
 }
 /******************************************Kcal-calc.html******************************************/
 .kcal-container {
+    display: flex;
     border: 1px red solid;
     width: 100vw;
     height: 75vh;
@@ -371,19 +372,32 @@ a   {
 }
 .kcal-servings  {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
+    gap: 3vw;
 }
-.kcal-servings, p, input  {
+.kcal-servings, input  {
     background-color: whitesmoke;
+}
+.kcal-servings > p  {
+    background-color: inherit;
 }
 .kcal-servings > button {
     background-color: var(--lightcolor);
 }
-.kcal-info-table {
+.kcal-info-table > table {
     border-collapse: collapse;
+    margin-top: 1rem;
+    background-color: whitesmoke;
+    color: black;
 }
-.kcal-results tr ,td    {
+.kcal-results   {
+    background-color: whitesmoke;
+}
+.kcal-results > table {
     border-collapse: collapse;
+    margin-top: 1rem;
+    background-color: whitesmoke;
+    color: black;
 }
 /******************************************Footer******************************************/
 .footer-container   {
