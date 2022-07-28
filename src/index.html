@@ -2,36 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Clueless Cook</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Babylonica&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/a01587ee71.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Babylonica&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/a01587ee71.js"></script>
 </head>
 <body>
+<!----------------------------------------Header---------------------------------------->
 <header class="header-container">
     <p class="header-item header-item-1">The Clueless Cook</p>
     <div class="header-item header-item-2">
-        <a href="index.html" class="navbar-a">home</a>
-        <a href="recipe-detail.html" class="navbar-a">about</a>
-        <a href="" class="navbar-a">calculator</a>
+        <a class="navbar-a" href="index.html">home</a>
+        <a class="navbar-a" href="recipe-detail.html">about</a>
+        <a class="navbar-a" href="kcal-calc.html">calculator</a>
     </div>
 </header>
 <main>
+    <!----------------------------------------Hero section---------------------------------------->
     <section class="main-container">
-        <h2 class="hero-text">Delicious Recipes.</h2>
-        <p class="hero-text">Updated Daily.</p>
+        <h2 class="hero-text hero-header">Delicious Recipes.</h2>
+        <p class="hero-text hero-par">Updated Daily.</p>
         <div class="random-search">
-            <button type="button" class="random-recipes-bttn">Find Recipes →</button>
+            <button class="random-recipes-bttn" type="button">Find Recipes →</button>
         </div>
     </section>
+    <!----------------------------------------Slider---------------------------------------->
     <section class="slider-container">
         <section class="slider-inner-container">
             <div class="card card-a">
-                <div     class="card-header card-image">
-                    <img src="./assets/images/cardplaceholder.jpg" alt="">
+                <div class="card-header card-image">
+                    <img alt="" src="./assets/images/cardplaceholder.jpg">
                 </div>
                 <div class="card-body">
                     <p>Recipe name</p>
@@ -43,8 +47,8 @@
                 </div>
             </div>
             <div class="card card-b">
-                <div     class="card-header card-image">
-                    <img src="./assets/images/cardplaceholder.jpg" alt="">
+                <div class="card-header card-image">
+                    <img alt="" src="./assets/images/cardplaceholder.jpg">
                 </div>
                 <div class="card-body">
                     <p>Recipe name</p>
@@ -56,8 +60,8 @@
                 </div>
             </div>
             <div class="card card-c">
-                <div     class="card-header card-image">
-                    <img src="./assets/images/cardplaceholder.jpg" alt="">
+                <div class="card-header card-image">
+                    <img alt="" src="./assets/images/cardplaceholder.jpg">
                 </div>
                 <div class="card-body">
                     <p>Recipe name</p>
@@ -70,11 +74,12 @@
             </div>
         </section>
     </section>
+    <!----------------------------------------Search bar---------------------------------------->
     <section class="searchbar-container">
         <section class="searchbar-inner-container">
-            <input type="text" class="search" name="search" id="search" placeholder="&#xf002" autocomplete="off">
-            <label for="meal-type" class="dropdown">
-                <select name="meal-type" id="meal-type" class="dropdown-selection">
+            <input autocomplete="off" class="search" id="search" name="search" placeholder="&#xf002" type="text">
+            <label class="dropdown" for="meal-type">
+                <select class="dropdown-selection" id="meal-type" name="meal-type">
                     <option disabled selected>Meal Type</option>
                     <option value="all">All</option>
                     <option value="breakfast">Breakfast</option>
@@ -84,8 +89,8 @@
                     <option value="tea-time">Tea time</option>
                 </select>
             </label>
-            <label for="cuisine" id="cuisine" class="dropdown">
-                <select name="cuisine" class="dropdown-selection">
+            <label class="dropdown" for="cuisine" id="cuisine">
+                <select class="dropdown-selection" name="cuisine" onchange="cuisineSelect()">
                     <option disabled selected>Cuisine</option>
                     <option value="all">All</option>
                     <option value="centraleurope">Central europe</option>
@@ -95,8 +100,8 @@
                     <option value="mideastern">Middle eastern</option>
                 </select>
             </label>
-            <label for="diet" id="diet" class="dropdown">
-                <select name="diet" class="dropdown-selection">
+            <label class="dropdown" for="diet" id="diet">
+                <select class="dropdown-selection" name="diet">
                     <option disabled selected>Diet</option>
                     <option value="all">All</option>
                     <option value="balanced">Balanced</option>
@@ -107,8 +112,8 @@
                     <option value="lowsodium">Low-sodium</option>
                 </select>
             </label>
-            <label for="time" id="time" class="dropdown">
-                <select name="time" class="dropdown-selection">
+            <label class="dropdown" for="time" id="time">
+                <select class="dropdown-selection" name="time">
                     <option disabled selected>Time</option>
                     <option value="all">All</option>
                     <option value="10m">10 m</option>
@@ -119,17 +124,18 @@
                     <option value="60m+">60+ m</option>
                 </select>
             </label>
-            <button type="button" class="searh-bttn" id="search-bttn">
+            <button class="searh-bttn" id="search-bttn" type="button">
                 <p>Search</p>
                 <i class="fa-solid fa-arrow-right-long"></i>
             </button>
         </section>
     </section>
+    <!----------------------------------------Search results---------------------------------------->
     <section class="searchresult-container">
         <section class="searchresult-inner-container">
             <div class="card card-1">
-                <div     class="card-header card-image">
-                    <img src="./assets/images/cardplaceholder.jpg" alt="">
+                <div class="card-header card-image">
+                    <img alt="" src="./assets/images/cardplaceholder.jpg">
                 </div>
                 <div class="card-body">
                     <p>Recipe name</p>
@@ -141,8 +147,8 @@
                 </div>
             </div>
             <div class="card card-2">
-                <div     class="card-header card-image">
-                    <img src="./assets/images/cardplaceholder.jpg" alt="">
+                <div class="card-header card-image">
+                    <img alt="" src="./assets/images/cardplaceholder.jpg">
                 </div>
                 <div class="card-body">
                     <p>Recipe name</p>
@@ -154,8 +160,8 @@
                 </div>
             </div>
             <div class="card card-3">
-                <div     class="card-header card-image">
-                    <img src="./assets/images/cardplaceholder.jpg" alt="">
+                <div class="card-header card-image">
+                    <img alt="" src="./assets/images/cardplaceholder.jpg">
                 </div>
                 <div class="card-body">
                     <p>Recipe name</p>
@@ -167,8 +173,8 @@
                 </div>
             </div>
             <div class="card card-4">
-                <div     class="card-header card-image">
-                    <img src="./assets/images/cardplaceholder.jpg" alt="">
+                <div class="card-header card-image">
+                    <img alt="" src="./assets/images/cardplaceholder.jpg">
                 </div>
                 <div class="card-body">
                     <p>Recipe name</p>
@@ -180,8 +186,8 @@
                 </div>
             </div>
             <div class="card card-5">
-                <div     class="card-header card-image">
-                    <img src="./assets/images/cardplaceholder.jpg" alt="">
+                <div class="card-header card-image">
+                    <img alt="" src="./assets/images/cardplaceholder.jpg">
                 </div>
                 <div class="card-body">
                     <p>Recipe name</p>
@@ -193,8 +199,8 @@
                 </div>
             </div>
             <div class="card card-6">
-                <div     class="card-header card-image">
-                    <img src="./assets/images/cardplaceholder.jpg" alt="">
+                <div class="card-header card-image">
+                    <img alt="" src="./assets/images/cardplaceholder.jpg">
                 </div>
                 <div class="card-body">
                     <p>Recipe name</p>
@@ -208,6 +214,7 @@
         </section>
     </section>
 </main>
+<!----------------------------------------Footer---------------------------------------->
 <footer>
     <section class="footer-container">
         <div class="footer-item">
@@ -235,14 +242,14 @@
         <div class="footer-item">
             <h3 class="footer-title">Social</h3>
             <br>
-            <a href="" class="fa-brands fa-facebook fa-2xl"></a>
-            <a href="" class="fa-brands fa-instagram fa-2xl"></a>
-            <a href="" class="fa-brands fa-linkedin fa-2xl"></a>
-            <a href="" class="fa-brands fa-twitter fa-2xl"></a>
+            <a class="fa-brands fa-facebook fa-2xl" href=""></a>
+            <a class="fa-brands fa-instagram fa-2xl" href=""></a>
+            <a class="fa-brands fa-linkedin fa-2xl" href=""></a>
+            <a class="fa-brands fa-twitter fa-2xl" href=""></a>
         </div>
     </section>
 </footer>
-<script type="module" src="main.js"></script>
-<script type="module" src="homepage.js"></script>
+<script src="main.js" type="module"></script>
+<script src="homepage.js" type="module"></script>
 </body>
 </html>

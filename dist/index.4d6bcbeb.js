@@ -534,7 +534,7 @@ function hmrAcceptRun(bundle, id) {
 },{}],"gLLPy":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-//********************-********************//
+//****************************************-****************************************//
 parcelHelpers.export(exports, "fetchData", ()=>fetchData);
 var _axios = require("axios");
 var _axiosDefault = parcelHelpers.interopDefault(_axios);
@@ -543,7 +543,7 @@ const axios = require("axios").default;
 async function fetchData(query) {
     try {
         // const res = await axios.get('https://api.edamam.com/api/recipes/v2?type=public&q=%22chicken%22&app_id=9401dfa0&app_key=' + process.env.API_KEY + '&random=true')
-        const res2 = await (0, _axiosDefault.default).get("https://api.edamam.com/api/recipes/v2", {
+        const search = await (0, _axiosDefault.default).get("https://api.edamam.com/api/recipes/v2", {
             params: {
                 type: "public",
                 q: query,

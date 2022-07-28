@@ -15,12 +15,13 @@
     background: var(--darkcolor);
     max-width: 100%;
 }
-/********************* Header *********************/
+/******************************************Header******************************************/
 .header-container  {
     display: flex;
     justify-content: space-between;
     background-color: whitesmoke;
-    height: 4rem;
+    min-height: 5rem;
+    padding-top: 0.3rem;
 }
 .header-item   {
     display: flex;
@@ -50,8 +51,8 @@ a   {
     color: black;
     text-decoration: none black;
 }
-/********************* Body *********************/
-/*------------------- Hero image section -------------------*/
+/******************************************Body******************************************/
+/*--------------------------------------Hero image section--------------------------------------*/
 .main-container {
     display: flex;
     flex-direction: column;
@@ -84,7 +85,7 @@ a   {
     cursor: pointer;
     background-color: hsl(204, 57%, 59%);
 }
-/*------------------- Card -------------------*/
+/*--------------------------------------Card--------------------------------------*/
 .card   {
     background: whitesmoke;
     border-radius: 0.3rem;
@@ -132,7 +133,7 @@ a   {
     transition: 0.5s;
     transform: scale(120%);
 }
-/*------------------- Image slider -------------------*/
+/*--------------------------------------Image slider--------------------------------------*/
 .slider-container   {
     display: flex;
     min-height: 20vh;
@@ -150,7 +151,7 @@ a   {
     margin-left: 20%;
     margin-right: 20%;
 }
-/*------------------- Searchbar -------------------*/
+/*--------------------------------------Searchbar--------------------------------------*/
 .searchbar-container    {
     display: flex;
     min-height: 12vh;
@@ -206,7 +207,7 @@ a   {
     background-color: hsl(204, 57%, 59%);
     cursor: pointer;
 }
-/*----------- Search results -------------------*/
+/*------------------------------Search results--------------------------------------*/
 .searchresult-container {
     min-height: 40vh;
     background-color: whitesmoke;
@@ -226,14 +227,14 @@ a   {
     padding-top: 3%;
     padding-bottom: 3%;
 }
-/********************* Recipe-detail.html *********************/
+/******************************************Recipe-detail.html******************************************/
 .recipe-container  {
     min-height: 90vh;
     background-color: whitesmoke;
 }
 .recipe-inner-container    {
     display: grid;
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: repeat(2, 60%);
     margin-right: 20%;
     margin-left: 20%;
     min-height: 100vh;
@@ -313,14 +314,78 @@ a   {
     color: black;
 }
 .labels {
+    display: inline;
     background-color: whitesmoke;
+    border: 1px red solid;
+    margin-top: 1rem;
 }
 .labels-header  {
     margin-left: 1rem;
     background-color: inherit;
     color: var(--darkcolor);
 }
-/********************* Footer *********************/
+.l-box  {
+    display: grid;
+    grid-template-columns: repeat(4, 7vw);
+    gap: 1rem;
+    background-color: whitesmoke;
+    justify-content: flex-start;
+    justify-items: center;
+    align-items: center;
+    padding: 1rem;
+}
+.l  {
+    border: 1px var(--darkcolor) solid;
+    background-color: var(--lightcolor);
+    padding: 0.5rem;
+    border-radius: 1rem;
+    width: max-content;
+    height: auto;
+    white-space: nowrap;
+    font-size: 0.8em;
+    color: var(--darkcolor);
+    font-weight: bold;
+}
+/******************************************Kcal-calc.html******************************************/
+.kcal-container {
+    border: 1px red solid;
+    width: 100vw;
+    height: 75vh;
+    background-color: whitesmoke;
+}
+.kcal-inner-container   {
+    border: 1px yellow solid;
+    margin-left: 20%;
+    height: inherit;
+    background-color: inherit;
+    width: 40vw;
+}
+.kcal-search    {
+    background-color: whitesmoke;
+}
+.kcal-search > button   {
+    background-color: var(--lightcolor);
+}
+.kcal-searchfield   {
+    background-color: inherit;
+}
+.kcal-servings  {
+    display: flex;
+    justify-content: space-evenly;
+}
+.kcal-servings, p, input  {
+    background-color: whitesmoke;
+}
+.kcal-servings > button {
+    background-color: var(--lightcolor);
+}
+.kcal-info-table {
+    border-collapse: collapse;
+}
+.kcal-results tr ,td    {
+    border-collapse: collapse;
+}
+/******************************************Footer******************************************/
 .footer-container   {
     display: flex;
     flex-direction: row;

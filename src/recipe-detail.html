@@ -2,21 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Clueless Cook</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Babylonica&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/a01587ee71.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Babylonica&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/a01587ee71.js"></script>
 </head>
 <body>
+<!----------------------------------------Header---------------------------------------->
 <header class="header-container">
     <p class="header-item header-item-1">The Clueless Cook</p>
     <div class="header-item header-item-2">
-        <a href="index.html" class="navbar-a">home</a>
-        <a href="recipe-detail.html" class="navbar-a">about</a>
-        <a href="" class="navbar-a">calculator</a>
+        <a class="navbar-a" href="index.html">home</a>
+        <a class="navbar-a" href="recipe-detail.html">about</a>
+        <a class="navbar-a" href="kcal-calc.html">calculator</a>
     </div>
 </header>
 <main>
@@ -29,14 +31,21 @@
                     <p>20 mins.</p>
                 </div>
                 <div class="recipe-text">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A culpa cum doloribus eligendi eveniet harum ipsa itaque, magni provident quae quas quisquam quod quos recusandae reiciendis sit temporibus vitae voluptatem.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A beatae doloremque non sit tempora. Commodi ea eaque quod repudiandae sequi.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, consectetur consequuntur eaque ex fugit illum incidunt ipsum, iste quisquam reiciendis sint sit soluta tenetur! Amet et hic labore, nihil nisi vel. A dignissimos eos natus omnis quaerat quidem repellendus veritatis.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad asperiores beatae, consectetur dicta, eos est eveniet facere harum id, libero perferendis quaerat quas qui quidem quisquam ut vel vitae voluptate.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A culpa cum doloribus eligendi eveniet
+                        harum ipsa itaque, magni provident quae quas quisquam quod quos recusandae reiciendis sit
+                        temporibus vitae voluptatem.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A beatae doloremque non sit tempora.
+                        Commodi ea eaque quod repudiandae sequi.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, consectetur consequuntur eaque ex
+                        fugit illum incidunt ipsum, iste quisquam reiciendis sint sit soluta tenetur! Amet et hic
+                        labore, nihil nisi vel. A dignissimos eos natus omnis quaerat quidem repellendus veritatis.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad asperiores beatae, consectetur
+                        dicta, eos est eveniet facere harum id, libero perferendis quaerat quas qui quidem quisquam ut
+                        vel vitae voluptate.</p>
                 </div>
             </div>
             <div class="recipe-image" id="recipe-image">
-                <img src="./assets/images/cardplaceholder.jpg" alt="">
+                <img alt="" src="./assets/images/cardplaceholder.jpg">
             </div>
             <div class="instructions">
                 <div class="instructions-header">
@@ -84,14 +93,23 @@
                     </table>
                 </div>
             </div>
-            <div class="labels">
-                    <div class="labels-header">
-                        <h4>Health labels</h4>
+            <section class="labels">
+                <div class="labels-header">
+                    <h4>Health labels</h4>
+                    <div class="l-box">
+                        <p class="l">Peanut-free</p>
+                        <p class="l">Kidney-friendly</p>
+                        <p class="l">Egg-free</p>
+                        <p class="l">Soy-free</p>
+                        <p class="l">Fish-free</p>
+                        <p class="l">Shellfish-free</p>
                     </div>
-            </div>
+                </div>
+                </se>
+            </section>
         </section>
-    </section>
 </main>
+<!----------------------------------------Footer---------------------------------------->
 <footer>
     <section class="footer-container">
         <div class="footer-item">
@@ -119,13 +137,13 @@
         <div class="footer-item">
             <h3 class="footer-title">Social</h3>
             <br>
-            <a href="" class="fa-brands fa-facebook fa-2xl"></a>
-            <a href="" class="fa-brands fa-instagram fa-2xl"></a>
-            <a href="" class="fa-brands fa-linkedin fa-2xl"></a>
-            <a href="" class="fa-brands fa-twitter fa-2xl"></a>
+            <a class="fa-brands fa-facebook fa-2xl" href=""></a>
+            <a class="fa-brands fa-instagram fa-2xl" href=""></a>
+            <a class="fa-brands fa-linkedin fa-2xl" href=""></a>
+            <a class="fa-brands fa-twitter fa-2xl" href=""></a>
         </div>
     </section>
 </footer>
-<script type="module" src="main.js"></script>
+<script src="main.js" type="module"></script>
 </body>
 </html>
