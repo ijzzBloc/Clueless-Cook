@@ -536,22 +536,23 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 //****************************************-****************************************//
 parcelHelpers.export(exports, "fetchData", ()=>fetchData);
-var _axios = require("axios");
-var _axiosDefault = parcelHelpers.interopDefault(_axios);
 require("dotenv").config();
 const axios = require("axios").default;
-const API = "https://api.edamam.com/api/recipes/v2";
 async function fetchData(query) {
     try {
-        const search = await (0, _axiosDefault.default).get(API, {
-            params: {
-                type: "public",
-                q: query,
-                app_id: "9401dfa0",
-                app_key: "3b5a9089716abdccc2d61736ea16bbb3"
-            }
-        }).then((result)=>{
-            console.log(result.data.hits);
+        return new Promise(async (resolve, reject)=>{
+            await axios.get("https://api.edamam.com/api/recipes/v2", {
+                params: {
+                    type: "public",
+                    q: query,
+                    app_id: "9401dfa0",
+                    app_key: "3b5a9089716abdccc2d61736ea16bbb3"
+                }
+            }).then((result)=>{
+                resolve(result);
+            }).catch((result)=>{
+                reject(result);
+            });
         });
     } catch (e) {
         console.log(e);
