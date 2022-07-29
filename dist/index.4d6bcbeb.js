@@ -542,7 +542,6 @@ require("dotenv").config();
 const axios = require("axios").default;
 async function fetchData(query) {
     try {
-        // const res = await axios.get('https://api.edamam.com/api/recipes/v2?type=public&q=%22chicken%22&app_id=9401dfa0&app_key=' + process.env.API_KEY + '&random=true')
         const search = await (0, _axiosDefault.default).get("https://api.edamam.com/api/recipes/v2", {
             params: {
                 type: "public",
