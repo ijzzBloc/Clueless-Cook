@@ -540,9 +540,10 @@ var _axios = require("axios");
 var _axiosDefault = parcelHelpers.interopDefault(_axios);
 require("dotenv").config();
 const axios = require("axios").default;
+const API = "https://api.edamam.com/api/recipes/v2";
 async function fetchData(query) {
     try {
-        const search = await (0, _axiosDefault.default).get("https://api.edamam.com/api/recipes/v2", {
+        const search = await (0, _axiosDefault.default).get(API, {
             params: {
                 type: "public",
                 q: query,
@@ -550,7 +551,7 @@ async function fetchData(query) {
                 app_key: "3b5a9089716abdccc2d61736ea16bbb3"
             }
         }).then((result)=>{
-            console.log(result);
+            console.log(result.data.hits);
         });
     } catch (e) {
         console.log(e);

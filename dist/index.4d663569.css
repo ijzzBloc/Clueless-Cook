@@ -354,7 +354,7 @@ a {
 .l {
   border: 1px var(--darkcolor) solid;
   background-color: var(--lightcolor);
-  width: max-content;
+  width: auto;
   height: auto;
   white-space: nowrap;
   color: var(--darkcolor);

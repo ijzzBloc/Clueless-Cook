@@ -324,7 +324,7 @@ a   {
     background-color: var(--lightcolor);
     padding: 0.5rem;
     border-radius: 1rem;
-    width: max-content;
+    width: auto;
     height: auto;
     white-space: nowrap;
     font-size: 0.8em;
