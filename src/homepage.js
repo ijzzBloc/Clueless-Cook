@@ -22,7 +22,7 @@ searchSubmit.addEventListener('click', () => {
                     //Create a new entry
                     recipesHTML+= '<div class="card card-1">\n' +
                         ' <div class="card-header card-image">\n' +
-                        '    <img alt="" src="/cardplaceholder.18cf3e6f.jpg">\n' +
+                        '    <img alt="" src='+recipeObject.image +'>\n' +
                         '     </div>\n' +
                         ' <div class="card-body">\n' +
                         '     <p>'+recipeObject.label +'</p>\n' +
