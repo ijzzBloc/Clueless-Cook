@@ -1,3 +1,38 @@
+const axios = require('axios').default;
+//****************************************Slider****************************************//
+import {
+    sliderData
+} from './main'
+
+let slideTrack = document.getElementById('slide-track');
+sliderData().then((result) => {
+    let slideResult = result;
+    console.log(slideResult)
+    let slideResultCount = slideResult.data.hits.length
+    if (slideResultCount >= 1) {
+        let TrackHTML = ""
+        for (let i = 0; i < slideResultCount; i++) {
+            console.log(slideResult.data.hits[i].recipe)
+            let slideObject = slideResult.data.hits[i].recipe;
+            //nieuwe entry
+            TrackHTML +=
+                '<a href="recipe-detail.html" class="card card-1" id="card">\n' +
+                ' <div class="card-header card-image">\n' +
+                '    <img alt="" src=' + slideObject.image + '>\n' +
+                '     </div>\n' +
+                ' <div class="card-body">\n' +
+                '     <p>' + slideObject.label + '</p>\n' +
+                ' </div>\n' +
+                ' <div class="card-footer">\n' +
+                '     <p>' + Math.trunc(slideObject.calories) + '&nbsp;|&nbsp;' + slideObject.ingredients.length + '&nbsp;ingredients</p>\n' +
+                '<p><i class="fa-solid fa-clock-rotate-left"></i>&nbsp;' + slideObject.totalTime + '</p>\n' +
+                ' </div>\n' +
+                ' </a>'
+        }
+        slideTrack.innerHTML = TrackHTML;
+    }
+})
+//****************************************Search****************************************//
 import {
     fetchData
 } from "./main"
@@ -29,7 +64,7 @@ searchSubmit.addEventListener('click', () => {
                         ' </div>\n' +
                         ' <div class="card-footer">\n' +
                         '     <p>' + Math.trunc(recipeObject.calories) + '&nbsp;|&nbsp;' + recipeObject.ingredients.length + '&nbsp;ingredients</p>\n' +
-                        '<p><i class="fa-solid fa-clock-rotate-left"></i>&nbsp;'+ recipeObject.totalTime +'</p>\n' +
+                        '<p><i class="fa-solid fa-clock-rotate-left"></i>&nbsp;' + recipeObject.totalTime + '</p>\n' +
                         ' </div>\n' +
                         ' </a>'
                 }

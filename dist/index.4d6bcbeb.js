@@ -534,10 +534,34 @@ function hmrAcceptRun(bundle, id) {
 },{}],"gLLPy":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
+//****************************************Slider****************************************//
+parcelHelpers.export(exports, "sliderData", ()=>sliderData);
 parcelHelpers.export(exports, "fetchData", ()=>fetchData);
 require("dotenv").config();
 const axios = require("axios").default;
-//****************************************-****************************************//
+async function sliderData() {
+    try {
+        return new Promise(async (resolve, reject)=>{
+            await axios.get("https://api.edamam.com/api/recipes/v2", {
+                params: {
+                    type: "public",
+                    q: "salad",
+                    app_id: "9401dfa0",
+                    app_key: "3b5a9089716abdccc2d61736ea16bbb3",
+                    random: "true",
+                    health: "vegan"
+                }
+            }).then((result)=>{
+                resolve(result);
+            }).catch((result)=>{
+                reject(result);
+            });
+        });
+    } catch (e) {
+        console.log(e);
+    }
+}
+//****************************************Search****************************************//
 let mealType = document.getElementById("meal-type");
 let mtOpt = mealType.options[mealType.selectedIndex].value;
 async function fetchData(query, mtOpt1) {

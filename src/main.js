@@ -1,7 +1,34 @@
 require('dotenv').config()
 const axios = require('axios').default;
 
-//****************************************-****************************************//
+
+//****************************************Slider****************************************//
+export async function sliderData() {
+    try {
+        return new Promise(async (resolve, reject) => {
+            await axios.get('https://api.edamam.com/api/recipes/v2',
+                {
+                    params:
+                        {
+                            type: 'public',
+                            q: 'salad',
+                            app_id: process.env.API_ID,
+                            app_key: process.env.API_KEY,
+                            random: 'true',
+                            health: 'vegan',
+                        }
+                }).then((result) => {
+                resolve(result)
+            })
+                .catch((result) => {
+                    reject(result)
+                })
+        })
+    } catch (e) {
+        console.log(e)
+    }
+}
+//****************************************Search****************************************//
 let mealType = document.getElementById("meal-type");
 let mtOpt = mealType.options[mealType.selectedIndex].value;
 
