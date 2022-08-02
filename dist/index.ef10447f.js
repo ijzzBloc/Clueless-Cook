@@ -548,15 +548,15 @@ searchSubmit.addEventListener("click", ()=>{
             for(let i = 0; i < recipesResultCount; i++){
                 console.log(recipesResult.data.hits[i].recipe);
                 let recipeObject = recipesResult.data.hits[i].recipe;
-                //Create a new entry
-                recipesHTML += '<div class="card card-1">\n <div class="card-header card-image">\n    <img alt="" src=' + recipeObject.image + ">\n" + "     </div>\n" + ' <div class="card-body">\n' + "     <p>" + recipeObject.label + "</p>\n" + " </div>\n" + ' <div class="card-footer">\n' + "     <p>300 calories&nbsp;|&nbsp;10 ingredients</p>\n" + '     <i class="fa-solid fa-clock-rotate-left"></i>\n' + "     <p>&nbsp;&nbsp;20 mins.</p>\n" + " </div>\n" + " </div>";
+                //nieuwe entry
+                recipesHTML += '<a href="recipe-detail.html" class="card card-1" id="card">\n <div class="card-header card-image">\n    <img alt="" src=' + recipeObject.image + ">\n" + "     </div>\n" + ' <div class="card-body">\n' + "     <p>" + recipeObject.label + "</p>\n" + " </div>\n" + ' <div class="card-footer">\n' + "     <p>" + Math.trunc(recipeObject.calories) + "&nbsp;|&nbsp;" + recipeObject.ingredients.length + "&nbsp;ingredients</p>\n" + '<p><i class="fa-solid fa-clock-rotate-left"></i>&nbsp;' + recipeObject.totalTime + "</p>\n" + " </div>\n" + " </a>";
             }
             searchContainer.innerHTML = recipesHTML;
         }
     }).catch((reason)=>{
         alert(reason);
     });
-    else alert("Please fill in a recipe");
+    else alert("Please enter a query in searchbar.");
 });
 function clearBox(elementID) {
     document.getElementById(elementID).innerHTML = "";

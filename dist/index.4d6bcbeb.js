@@ -534,11 +534,13 @@ function hmrAcceptRun(bundle, id) {
 },{}],"gLLPy":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-//****************************************-****************************************//
 parcelHelpers.export(exports, "fetchData", ()=>fetchData);
 require("dotenv").config();
 const axios = require("axios").default;
-async function fetchData(query) {
+//****************************************-****************************************//
+let mealType = document.getElementById("meal-type");
+let mtOpt = mealType.options[mealType.selectedIndex].value;
+async function fetchData(query, mtOpt1) {
     try {
         return new Promise(async (resolve, reject)=>{
             await axios.get("https://api.edamam.com/api/recipes/v2", {
@@ -546,7 +548,8 @@ async function fetchData(query) {
                     type: "public",
                     q: query,
                     app_id: "9401dfa0",
-                    app_key: "3b5a9089716abdccc2d61736ea16bbb3"
+                    app_key: "3b5a9089716abdccc2d61736ea16bbb3",
+                    mealType: mtOpt1
                 }
             }).then((result)=>{
                 resolve(result);

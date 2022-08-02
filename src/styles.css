@@ -16,6 +16,9 @@
     max-width: 100%;
     background-color: white;
 }
+.fa-clock-rotate-left   {
+    background-color: white;
+}
 /******************************************Header******************************************/
 .header-container  {
     display: flex;
@@ -116,15 +119,12 @@ a   {
     padding-left: 1em;
 }
 .card-footer    {
-    display: inline-flex;
+    display: flex;
+    justify-content: space-between;
+    white-space: nowrap;
     padding-left: 1em;
+    padding-right: 1em;
     margin-bottom: 0.3rem;
-}
-.card-footer > i   {
-    margin-left: 6.5vw;
-    background-color: inherit;
-}
-.card-footer > p    {
 }
 .card:hover  {
     transition: 0.5s;
