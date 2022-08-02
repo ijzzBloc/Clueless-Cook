@@ -16,18 +16,22 @@ sliderData().then((result) => {
             let slideObject = slideResult.data.hits[i].recipe;
             //nieuwe entry
             TrackHTML +=
-                '<a href="recipe-detail.html" class="card card-1" id="card">\n' +
-                ' <div class="card-header card-image">\n' +
-                '    <img alt="" src=' + slideObject.image + '>\n' +
-                '     </div>\n' +
-                ' <div class="card-body">\n' +
-                '     <p>' + slideObject.label + '</p>\n' +
-                ' </div>\n' +
-                ' <div class="card-footer">\n' +
-                '     <p>' + Math.trunc(slideObject.calories) + '&nbsp;|&nbsp;' + slideObject.ingredients.length + '&nbsp;ingredients</p>\n' +
-                '<p><i class="fa-solid fa-clock-rotate-left"></i>&nbsp;' + slideObject.totalTime + '</p>\n' +
-                ' </div>\n' +
-                ' </a>'
+                '<div class="slide">\n' +
+                    '<div class="slide-header slide-image">\n' +
+                        '<img alt="" src=' + slideObject.image + '>\n' +
+                    '</div>\n' +
+                    '<div class="slide-body">\n' +
+                        '<p>' + slideObject.label +'</p>\n' +
+                    '</div>\n' +
+                    '<div class="slide-footer">\n' +
+                        '<div class="slfdiv">\n' +
+                            '<p>' + Math.trunc(slideObject.calories) + '.Kcal&nbsp;|&nbsp;' + slideObject.ingredients.length + '.Ingredients</p>\n' +
+                        '</div>\n' +
+                        '<div class="slfdiv">\n' +
+                            '<p class="slfdiv"><i class="fa-solid fa-clock-rotate-left"></i>' + slideObject.totalTime + '</p>\n' +
+                        '</div>\n' +
+                    '</div>\n' +
+                '</div>'
         }
         slideTrack.innerHTML = TrackHTML;
     }
@@ -63,7 +67,7 @@ searchSubmit.addEventListener('click', () => {
                         '     <p>' + recipeObject.label + '</p>\n' +
                         ' </div>\n' +
                         ' <div class="card-footer">\n' +
-                        '     <p>' + Math.trunc(recipeObject.calories) + '&nbsp;|&nbsp;' + recipeObject.ingredients.length + '&nbsp;ingredients</p>\n' +
+                        '     <p>' + Math.trunc(recipeObject.calories) +'.Kcal&nbsp;|&nbsp;' + recipeObject.ingredients.length + '.Ingredients</p>\n' +
                         '<p><i class="fa-solid fa-clock-rotate-left"></i>&nbsp;' + recipeObject.totalTime + '</p>\n' +
                         ' </div>\n' +
                         ' </a>'
