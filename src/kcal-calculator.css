@@ -1,0 +1,58 @@
+.kcal-container {
+    display: flex;
+    border: 1px red solid;
+    width: 100vw;
+    height: 75vh;
+}
+
+.kcal-inner-container {
+    border: 1px yellow solid;
+    margin-left: 20%;
+    height: inherit;
+    width: 40vw;
+}
+
+.kcal-inner-container > h3 {
+    color: var(--darkcolor)
+}
+
+.kcal-search {
+}
+
+.kcal-search > button {
+    background-color: var(--lightcolor);
+}
+
+.kcal-searchfield {
+}
+
+.kcal-servings {
+    display: flex;
+    justify-content: flex-start;
+    gap: 3vw;
+}
+
+.kcal-servings, input {
+}
+
+.kcal-servings > p {
+}
+
+.kcal-servings > button {
+    background-color: var(--lightcolor);
+}
+
+.kcal-info-table > table {
+    border-collapse: collapse;
+    margin-top: 1rem;
+    color: black;
+}
+
+.kcal-results {
+}
+
+.kcal-results > table {
+    border-collapse: collapse;
+    margin-top: 1rem;
+    color: black;
+}

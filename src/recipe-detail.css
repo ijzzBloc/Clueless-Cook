@@ -1,0 +1,127 @@
+.recipe-container {
+    min-height: 90vh;
+}
+
+.recipe-inner-container {
+    display: grid;
+    grid-template-columns: repeat(2, 60%);
+    margin-right: 20%;
+    margin-left: 20%;
+    min-height: 100vh;
+}
+
+.details {
+    color: var(--darkcolor);
+}
+
+.details-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 1rem;
+    border: 1px red solid;
+}
+
+.details-header > p {
+    margin-top: 1rem;
+    color: var(--darkcolor);
+    margin-bottom: 0.9rem;
+    padding-left: 0.5rem;
+}
+
+.details-header > h3 {
+    color: var(--darkcolor)
+}
+
+.details-header > i {
+    margin-top: 1.1rem;
+    margin-left: 5rem;
+    background-color: white;
+    padding-bottom: 1.2rem;
+}
+
+.recipe-text {
+    margin-left: 1rem;
+    color: inherit;
+}
+
+.recipe-text > p {
+    margin-top: 1rem;
+    color: inherit;
+}
+
+.recipe-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.instructions {
+    color: var(--darkcolor);
+}
+
+.instructions-header {
+    margin-left: 1rem;
+    margin-top: 1rem;
+    color: inherit;
+}
+
+.instructions-header > ul, li {
+    margin-left: 2rem;
+    margin-top: 1rem;
+    color: inherit;
+}
+
+.nutrients {
+}
+
+.nutrients-header, h4 {
+    margin-top: 1rem;
+    color: var(--darkcolor);
+}
+
+.nutrients-header > h4 {
+    margin-left: 1rem;
+}
+
+.nutrients-table, tr, td {
+    border-collapse: collapse;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    min-width: 15vw;
+    color: black;
+}
+
+.labels {
+    display: inline;
+    border: 1px red solid;
+    margin-top: 1rem;
+}
+
+.labels-header {
+    margin-left: 1rem;
+    color: var(--darkcolor);
+}
+
+.l-box {
+    display: grid;
+    grid-template-columns: repeat(4, 7vw);
+    gap: 1rem;
+    justify-content: flex-start;
+    justify-items: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.l {
+    border: 1px var(--darkcolor) solid;
+    background-color: var(--lightcolor);
+    padding: 0.5rem;
+    border-radius: 1rem;
+    width: auto;
+    height: auto;
+    white-space: nowrap;
+    font-size: 0.8em;
+    color: var(--darkcolor);
+    font-weight: bold;
+}

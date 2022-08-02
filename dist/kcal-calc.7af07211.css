@@ -1,0 +1,39 @@
+.kcal-container {
+  width: 100vw;
+  height: 75vh;
+  border: 1px solid red;
+  display: flex;
+}
+
+.kcal-inner-container {
+  height: inherit;
+  width: 40vw;
+  border: 1px solid #ff0;
+  margin-left: 20%;
+}
+
+.kcal-inner-container > h3 {
+  color: var(--darkcolor);
+}
+
+.kcal-search > button {
+  background-color: var(--lightcolor);
+}
+
+.kcal-servings {
+  justify-content: flex-start;
+  gap: 3vw;
+  display: flex;
+}
+
+.kcal-servings > button {
+  background-color: var(--lightcolor);
+}
+
+.kcal-info-table > table, .kcal-results > table {
+  border-collapse: collapse;
+  color: #000;
+  margin-top: 1rem;
+}
+
+/*# sourceMappingURL=kcal-calc.7af07211.css.map */
