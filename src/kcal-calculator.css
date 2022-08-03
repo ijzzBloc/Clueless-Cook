@@ -1,6 +1,5 @@
 .kcal-container {
     display: flex;
-    border: 1px red solid;
     width: 100vw;
     height: 75vh;
 }
@@ -8,7 +7,6 @@
 .kcal-inner-container {
     display: flex;
     flex-direction: column;
-    border: 1px yellow solid;
     margin-left: 20%;
     height: inherit;
     padding-top: 3.5vh;
