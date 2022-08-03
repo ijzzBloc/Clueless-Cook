@@ -538,14 +538,13 @@ const axios = require("axios").default;
 let slideTrack = document.getElementById("slide-track");
 (0, _main.sliderData)().then((result)=>{
     let slideResult = result;
-    console.log(slideResult);
+    // console.log(slideResult)
     let slideResultCount = slideResult.data.hits.length;
     if (slideResultCount >= 1) {
         let TrackHTML = "";
         for(let i = 0; i < slideResultCount; i++){
-            console.log(slideResult.data.hits[i].recipe);
+            // console.log(slideResult.data.hits[i].recipe)
             let slideObject = slideResult.data.hits[i].recipe;
-            //nieuwe entry
             TrackHTML += '<div class="slide">\n<div class="slide-header slide-image">\n<img alt="" src=' + slideObject.image + ">\n" + "</div>\n" + '<div class="slide-body">\n' + "<p>" + slideObject.label + "</p>\n" + "</div>\n" + '<div class="slide-footer">\n' + '<div class="slfdiv">\n' + "<p>" + Math.trunc(slideObject.calories) + ".Kcal&nbsp;|&nbsp;" + slideObject.ingredients.length + ".Ingredients</p>\n" + "</div>\n" + '<div class="slfdiv">\n' + '<p class="slfdiv"><i class="fa-solid fa-clock-rotate-left"></i>' + slideObject.totalTime + "</p>\n" + "</div>\n" + "</div>\n" + "</div>";
         }
         slideTrack.innerHTML = TrackHTML;
@@ -566,7 +565,6 @@ searchSubmit.addEventListener("click", ()=>{
             for(let i = 0; i < recipesResultCount; i++){
                 console.log(recipesResult.data.hits[i].recipe);
                 let recipeObject = recipesResult.data.hits[i].recipe;
-                //nieuwe entry
                 recipesHTML += '<a href="recipe-detail.html" class="card card-1" id="card">\n <div class="card-header card-image">\n    <img alt="" src=' + recipeObject.image + ">\n" + "     </div>\n" + ' <div class="card-body">\n' + "     <p>" + recipeObject.label + "</p>\n" + " </div>\n" + ' <div class="card-footer">\n' + "     <p>" + Math.trunc(recipeObject.calories) + ".Kcal&nbsp;|&nbsp;" + recipeObject.ingredients.length + ".Ingredients</p>\n" + '<p><i class="fa-solid fa-clock-rotate-left"></i>&nbsp;' + recipeObject.totalTime + "</p>\n" + " </div>\n" + " </a>";
             }
             searchContainer.innerHTML = recipesHTML;

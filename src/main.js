@@ -29,8 +29,15 @@ export async function sliderData() {
     }
 }
 //****************************************Search****************************************//
+// let mealType = document.getElementById("meal-type");
+// let mtOpt = mealType.options[mealType.selectedIndex].value;
+// mealType.addEventListener('onchange', function(){
+// })
 let mealType = document.getElementById("meal-type");
-let mtOpt = mealType.options[mealType.selectedIndex].value;
+mealType.onchange = function () {
+    let mtOpt = mealType.options[mealType.selectedIndex].value;
+    console.log(mtOpt)
+}
 
 export async function fetchData(query, mtOpt) {
     try {

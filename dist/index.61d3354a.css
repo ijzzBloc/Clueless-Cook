@@ -130,6 +130,7 @@
   min-height: 12vh;
   min-width: 60%;
   background-color: inherit;
+  border: 1px solid red;
   justify-content: space-between;
   align-items: center;
   margin-left: 20%;
@@ -138,13 +139,22 @@
 }
 
 .search {
-  text-align: right;
   width: 20%;
   min-height: 3vh;
   border: 1px solid #0000004d;
   border-radius: .3rem;
-  font-family: FontAwesome;
+  outline: none;
   font-size: 1em;
+}
+
+.search::placeholder {
+  color: #000;
+  text-align: center;
+}
+
+.search:focus::placeholder {
+  color: #0000;
+  transition: all .5s;
 }
 
 .dropdown {

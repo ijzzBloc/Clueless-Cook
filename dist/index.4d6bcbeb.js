@@ -562,9 +562,16 @@ async function sliderData() {
     }
 }
 //****************************************Search****************************************//
+// let mealType = document.getElementById("meal-type");
+// let mtOpt = mealType.options[mealType.selectedIndex].value;
+// mealType.addEventListener('onchange', function(){
+// })
 let mealType = document.getElementById("meal-type");
-let mtOpt = mealType.options[mealType.selectedIndex].value;
-async function fetchData(query, mtOpt1) {
+mealType.onchange = function() {
+    let mtOpt = mealType.options[mealType.selectedIndex].value;
+    console.log(mtOpt);
+};
+async function fetchData(query, mtOpt) {
     try {
         return new Promise(async (resolve, reject)=>{
             await axios.get("https://api.edamam.com/api/recipes/v2", {
@@ -573,7 +580,7 @@ async function fetchData(query, mtOpt1) {
                     q: query,
                     app_id: "9401dfa0",
                     app_key: "3b5a9089716abdccc2d61736ea16bbb3",
-                    mealType: mtOpt1
+                    mealType: mtOpt
                 }
             }).then((result)=>{
                 resolve(result);

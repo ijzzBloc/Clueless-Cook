@@ -1,21 +1,23 @@
 .recipe-container {
   min-height: 90vh;
+  border: 1px solid green;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 .recipe-inner-container {
   min-height: 100vh;
-  grid-template-columns: repeat(2, 60%);
-  margin-left: 20%;
-  margin-right: 20%;
+  border: 1px solid #ff0;
+  grid-template-columns: repeat(2, 50%);
   display: grid;
 }
 
 .details {
   color: var(--darkcolor);
+  border: 1px solid #00f;
 }
 
 .details-header {
-  border: 1px solid red;
   justify-content: flex-start;
   align-items: center;
   margin-left: 1rem;
@@ -51,6 +53,7 @@
 }
 
 .recipe-image {
+  border: 1px solid #00f;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -58,6 +61,7 @@
 
 .instructions {
   color: var(--darkcolor);
+  border: 1px solid #00f;
 }
 
 .instructions-header {
@@ -70,6 +74,10 @@
   color: inherit;
   margin-top: 1rem;
   margin-left: 2rem;
+}
+
+.nutrients {
+  border: 1px solid #00f;
 }
 
 .nutrients-header, h4 {
@@ -89,10 +97,11 @@
   margin-left: 1rem;
 }
 
-.labels {
+.labels-container {
   border: 1px solid red;
   margin-top: 1rem;
-  display: inline;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 .labels-header {
@@ -101,25 +110,25 @@
 }
 
 .l-box {
-  grid-template-columns: repeat(4, 7vw);
-  justify-content: flex-start;
-  place-items: center;
-  gap: 1rem;
+  width: 100%;
+  height: auto;
+  border: 1px solid red;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(4, max-content);
   padding: 1rem;
   display: grid;
 }
 
 .l {
-  border: 1px var(--darkcolor) solid;
+  width: max-content;
+  padding: .5em;
+}
+
+.l > p {
   background-color: var(--lightcolor);
-  width: auto;
-  height: auto;
-  white-space: nowrap;
-  color: var(--darkcolor);
-  border-radius: 1rem;
-  padding: .5rem;
-  font-size: .8em;
-  font-weight: bold;
+  color: #f5f5f5;
+  border-radius: 100vh;
+  padding: .4em;
 }
 
 /*# sourceMappingURL=recipe-detail.709e5e5a.css.map */

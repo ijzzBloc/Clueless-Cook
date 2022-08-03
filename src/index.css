@@ -144,18 +144,24 @@
     margin-left: 20%;
     margin-right: 20%;
     background-color: inherit;
+    border: 1px red solid;
 }
-
 .search {
-    text-align: right;
-    font-family: 'FontAwesome';
     width: 20%;
     min-height: 3vh;
     border-radius: 0.3rem;
     border: rgb(0, 0, 0, 30%) 1px solid;
     font-size: 1em;
+    outline: none;
 }
-
+.search::placeholder {
+    color: black;
+    text-align: center;
+}
+.search:focus::placeholder  {
+    color: transparent;
+    transition: 0.5s;
+}
 .dropdown {
     background-color: var(--darkcolor);
 }

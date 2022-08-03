@@ -86,6 +86,7 @@ a {
 
 .footer-item {
   background-color: inherit;
+  padding-left: 1rem;
 }
 
 .footer-item > p, h3 {
@@ -97,6 +98,7 @@ a {
   color: var(--lightcolor);
   width: 3rem;
   background-color: inherit;
+  padding-bottom: 2rem;
 }
 
 .fa-brands:hover {

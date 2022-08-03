@@ -1,17 +1,22 @@
 .recipe-container {
     min-height: 90vh;
+    margin-right: 20%;
+    margin-left: 20%;
+    border: green 1px solid;
 }
 
 .recipe-inner-container {
     display: grid;
-    grid-template-columns: repeat(2, 60%);
-    margin-right: 20%;
-    margin-left: 20%;
+    grid-template-columns: repeat(2, 50%);
+    /*margin-right: 20%;*/
+    /*margin-left: 20%;*/
     min-height: 100vh;
+    border: yellow 1px solid;
 }
 
 .details {
     color: var(--darkcolor);
+    border: blue 1px solid;
 }
 
 .details-header {
@@ -19,7 +24,6 @@
     justify-content: flex-start;
     align-items: center;
     margin-left: 1rem;
-    border: 1px red solid;
 }
 
 .details-header > p {
@@ -54,10 +58,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border: blue 1px solid;
 }
 
 .instructions {
     color: var(--darkcolor);
+    border: blue 1px solid;
 }
 
 .instructions-header {
@@ -73,6 +79,7 @@
 }
 
 .nutrients {
+    border: blue 1px solid;
 }
 
 .nutrients-header, h4 {
@@ -92,12 +99,15 @@
     color: black;
 }
 
-.labels {
-    display: inline;
+.labels-container {
     border: 1px red solid;
     margin-top: 1rem;
+    margin-left: 20%;
+    margin-right: 20%;
 }
+.label-inner-container  {
 
+}
 .labels-header {
     margin-left: 1rem;
     color: var(--darkcolor);
@@ -105,23 +115,21 @@
 
 .l-box {
     display: grid;
-    grid-template-columns: repeat(4, 7vw);
-    gap: 1rem;
-    justify-content: flex-start;
-    justify-items: center;
-    align-items: center;
+    grid-template-columns: repeat(4, max-content);
+    flex-wrap: wrap;
     padding: 1rem;
+    border: 1px red solid;
+    width: 100%;
+    height: auto;
 }
 
 .l {
-    border: 1px var(--darkcolor) solid;
+    padding: 0.5em;
+    width: max-content;
+}
+.l > p {
     background-color: var(--lightcolor);
-    padding: 0.5rem;
-    border-radius: 1rem;
-    width: auto;
-    height: auto;
-    white-space: nowrap;
-    font-size: 0.8em;
-    color: var(--darkcolor);
-    font-weight: bold;
+    padding: 0.4em;
+    border-radius: 100vh;
+    color: whitesmoke;
 }
