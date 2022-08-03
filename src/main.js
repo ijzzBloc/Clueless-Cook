@@ -63,3 +63,4 @@ export async function fetchData(query, mtOpt) {
         console.log(e)
     }
 }
+//****************************************Calculator****************************************//

@@ -24,38 +24,24 @@
 <!----------------------------------------Main---------------------------------------->
 <main class="kcal-container">
     <section class="kcal-inner-container">
-        <h3>Calorie Calculator</h3>
-        <div class="kcal-search">
-            <input class="kcal-searchfield" type="text">
-            <button type="button">Search</button>
+        <div class="title">
+            <h2>Calorie Calculator</h2>
         </div>
-        <div class="kcal-info-table">
-            <table>
-                <tr>
-                    <td>product</td>
-                    <td>mars</td>
-                    <td>label</td>
-                </tr>
-                <tr>
-                    <td>Mars</td>
-                    <td>60</td>
-                    <td>Gram</td>
-                </tr>
-            </table>
-        </div>
-        <div class="kcal-servings">
-            <p>amount</p>
-            <input type="text">
-            <p>serving(s)</p>
-            <button type="button">+ add</button>
+        <div class="kcalsearchcontainer">
+            <div class="kcalsearchbox">
+                <input aria-label="kcalsrchtxt" id="kcalsearch" placeholder="Enter product" type="text"><i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="searchbttn" id="kcal-search-bttn">
+                <p class="searchbttn">Search&nbsp;&nbsp;→</p>
+            </div>
         </div>
         <div class="kcal-results">
-            <table>
+            <table class="resultstable">
                 <tr>
-                    <td>Product</td>
-                    <td>Calories</td>
-                    <td>Fat</td>
-                    <td>Carbs</td>
+                    <th>Product</th>
+                    <th>Calories</th>
+                    <th>Fat</th>
+                    <th>Carbs</th>
                 </tr>
                 <tr>
                     <td>Milk</td>
@@ -69,11 +55,8 @@
                     <td>12g</td>
                     <td>31g</td>
                 </tr>
-            </table>
-            <hr>
-            <table>
                 <tr>
-                    <td>Total</td>
+                    <td>Total:</td>
                     <td>383kcal</td>
                     <td>20g</td>
                     <td>43g</td>

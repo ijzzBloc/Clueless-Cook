@@ -536,7 +536,8 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 //****************************************Slider****************************************//
 parcelHelpers.export(exports, "sliderData", ()=>sliderData);
-parcelHelpers.export(exports, "fetchData", ()=>fetchData);
+parcelHelpers.export(exports, "fetchData", ()=>fetchData) //****************************************Calculator****************************************//
+;
 require("dotenv").config();
 const axios = require("axios").default;
 async function sliderData() {

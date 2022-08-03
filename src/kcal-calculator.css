@@ -6,53 +6,81 @@
 }
 
 .kcal-inner-container {
+    display: flex;
+    flex-direction: column;
     border: 1px yellow solid;
     margin-left: 20%;
     height: inherit;
-    width: 40vw;
+    padding-top: 3.5vh;
+    width: 600px;
 }
-
-.kcal-inner-container > h3 {
-    color: var(--darkcolor)
+.title  {
+    padding-bottom: 2vh;
 }
-
-.kcal-search {
+.title > h2  {
+    color: var(--darkcolor);
 }
-
-.kcal-search > button {
-    background-color: var(--lightcolor);
-}
-
-.kcal-searchfield {
-}
-
-.kcal-servings {
+.kcalsearchcontainer    {
     display: flex;
+}
+.kcalsearchbox  {
+    height: 3rem;
+    display: flex;
+    border: 1px black solid;
     justify-content: flex-start;
-    gap: 3vw;
+    align-items: center;
+    width: max-content;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 0.3rem;
 }
-
-.kcal-servings, input {
+#kcalsearch {
+    border: none;
+    height: 38px;
+    width: 15rem;
+    outline: none;
 }
-
-.kcal-servings > p {
+#kcalsearch:focus::placeholder  {
+    color: transparent;
+    transition: 0.5s;
 }
-
-.kcal-servings > button {
+.searchbttn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--lightcolor);
+    width: 8rem;
+    border-radius: 0.3rem;
 }
+#kcal-search-bttn   {
+    margin-left: 2rem;
+}
+.searchbttn:hover, .searchbttn:hover > p  {
+    cursor: pointer;
+    background-color: var(--lighthovercolor);
+}
+
+
+
+
+
+
+
+
+
+
 
 .kcal-info-table > table {
-    border-collapse: collapse;
     margin-top: 1rem;
     color: black;
 }
-
 .kcal-results {
 }
-
-.kcal-results > table {
-    border-collapse: collapse;
-    margin-top: 1rem;
-    color: black;
+.resultstable {
+    display: flex;
+    width: auto;
+    border-spacing: 1rem;
+    text-align: center;
+}
+.resultstable > td  {
 }
