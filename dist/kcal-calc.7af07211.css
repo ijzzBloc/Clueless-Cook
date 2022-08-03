@@ -46,6 +46,10 @@
   outline: none;
 }
 
+#kcalsearch:hover {
+  cursor: pointer;
+}
+
 #kcalsearch:focus::placeholder {
   color: #0000;
   transition: all .5s;

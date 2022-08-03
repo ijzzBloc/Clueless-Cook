@@ -40,6 +40,9 @@
     width: 15rem;
     outline: none;
 }
+#kcalsearch:hover   {
+    cursor: pointer;
+ }
 #kcalsearch:focus::placeholder  {
     color: transparent;
     transition: 0.5s;
