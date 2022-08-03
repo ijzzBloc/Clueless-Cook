@@ -84,6 +84,7 @@
     width: auto;
     border-spacing: 1rem;
     text-align: center;
+    color: var(--darkcolor);
 }
 .resultstable > td  {
 }
