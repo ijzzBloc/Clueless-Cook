@@ -147,6 +147,10 @@
   font-size: 1em;
 }
 
+.search:hover {
+  cursor: pointer;
+}
+
 .search::placeholder {
   color: #000;
   text-align: center;
@@ -168,6 +172,10 @@
   border-radius: .3rem;
   padding-left: 10%;
   font-size: .9em;
+}
+
+.dropdown-selection:hover {
+  cursor: pointer;
 }
 
 .dropdown-selection > option {

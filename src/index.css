@@ -154,6 +154,9 @@
     font-size: 1em;
     outline: none;
 }
+.search:hover   {
+    cursor: pointer;
+}
 .search::placeholder {
     color: black;
     text-align: center;
@@ -165,7 +168,6 @@
 .dropdown {
     background-color: var(--darkcolor);
 }
-
 .dropdown-selection {
     width: 8vw;
     min-height: 3vh;
@@ -173,6 +175,9 @@
     border-radius: 0.3rem;
     border: rgb(0, 0, 0, 30%) 1px solid;
     font-size: 0.9em;
+}
+.dropdown-selection:hover   {
+    cursor: pointer;
 }
 
 .dropdown-selection > option {
