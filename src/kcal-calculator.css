@@ -12,16 +12,17 @@
     margin-left: 20%;
     height: inherit;
     padding-top: 3.5vh;
-    width: 600px;
+    width: auto;
 }
 .title  {
-    padding-bottom: 2vh;
+    padding-bottom: 5vh;
 }
 .title > h2  {
     color: var(--darkcolor);
 }
 .kcalsearchcontainer    {
     display: flex;
+    padding-bottom: 3vh;
 }
 .kcalsearchbox  {
     height: 3rem;
@@ -62,8 +63,35 @@
     cursor: pointer;
     background-color: var(--lighthovercolor);
 }
-
-
+.serving-bar    {
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 3vh;
+}
+#servingamount  {
+    height: 40px;
+    border-radius: 0.3rem;
+    width: 6rem;
+    text-align: center;
+}
+#servingamount:hover    {
+    cursor: pointer;
+}
+.addbttn    {
+    display: flex;
+    background-color: var(--lightcolor);
+    border-radius: 0.3rem;
+    padding: 0.2rem;
+    width: 5rem;
+    justify-content: center;
+    align-items: center;
+}
+.addbttn:hover, .addbttn:hover > p  {
+    cursor: pointer;
+    background-color: var(--lighthovercolor);
+}
 
 
 
@@ -85,6 +113,7 @@
     border-spacing: 1rem;
     text-align: center;
     color: var(--darkcolor);
+    padding-bottom: 3vh;
 }
 .resultstable > td  {
 }

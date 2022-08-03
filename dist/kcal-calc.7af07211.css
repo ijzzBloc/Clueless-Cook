@@ -7,7 +7,7 @@
 
 .kcal-inner-container {
   height: inherit;
-  width: 600px;
+  width: auto;
   border: 1px solid #ff0;
   flex-direction: column;
   margin-left: 20%;
@@ -16,7 +16,7 @@
 }
 
 .title {
-  padding-bottom: 2vh;
+  padding-bottom: 5vh;
 }
 
 .title > h2 {
@@ -24,6 +24,7 @@
 }
 
 .kcalsearchcontainer {
+  padding-bottom: 3vh;
   display: flex;
 }
 
@@ -73,6 +74,40 @@
   background-color: var(--lighthovercolor);
 }
 
+.serving-bar {
+  height: auto;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 3vh;
+  display: flex;
+}
+
+#servingamount {
+  height: 40px;
+  width: 6rem;
+  text-align: center;
+  border-radius: .3rem;
+}
+
+#servingamount:hover {
+  cursor: pointer;
+}
+
+.addbttn {
+  background-color: var(--lightcolor);
+  width: 5rem;
+  border-radius: .3rem;
+  justify-content: center;
+  align-items: center;
+  padding: .2rem;
+  display: flex;
+}
+
+.addbttn:hover, .addbttn:hover > p {
+  cursor: pointer;
+  background-color: var(--lighthovercolor);
+}
+
 .kcal-info-table > table {
   color: #000;
   margin-top: 1rem;
@@ -83,6 +118,7 @@
   border-spacing: 1rem;
   text-align: center;
   color: var(--darkcolor);
+  padding-bottom: 3vh;
   display: flex;
 }
 
