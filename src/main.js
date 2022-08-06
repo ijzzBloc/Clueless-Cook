@@ -38,6 +38,16 @@ mealType.onchange = function () {
     let mtOpt = mealType.options[mealType.selectedIndex].value;
     console.log(mtOpt)
 }
+// let cuisine = document.getElementById("cuisine");
+// cuisine.onchange = function () {
+//     let csOpt = cuisine.options[cuisine.selectedIndex].value;
+//     console.log(csOpt)
+// }
+// let diet = document.getElementById("diet");
+// diet.onchange = function () {
+//     let dtOpt = diet.options[diet.selectedIndex].value;
+//     console.log(dtOpt)
+// }
 
 export async function fetchData(query, mtOpt) {
     try {
@@ -64,3 +74,26 @@ export async function fetchData(query, mtOpt) {
     }
 }
 //****************************************Calculator****************************************//
+export async function calcData(calcInputText) {
+    try {
+        return new Promise(async (resolve, reject) => {
+            await axios.get('https://api.edamam.com/auto-complete',
+                {
+                    params:
+                        {
+                            ingr: calcInputText,
+                            app_id: process.env.ID_CALC,
+                            app_key: process.env.KEY_CALC,
+                            limit: 1,
+                        }
+                }).then((result) => {
+                resolve(result)
+            })
+                .catch((result) => {
+                    reject(result)
+                })
+        })
+    } catch (e) {
+        console.log(e)
+    }
+}

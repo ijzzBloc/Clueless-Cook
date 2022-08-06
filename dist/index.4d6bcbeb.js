@@ -536,8 +536,19 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 //****************************************Slider****************************************//
 parcelHelpers.export(exports, "sliderData", ()=>sliderData);
-parcelHelpers.export(exports, "fetchData", ()=>fetchData) //****************************************Calculator****************************************//
-;
+// let cuisine = document.getElementById("cuisine");
+// cuisine.onchange = function () {
+//     let csOpt = cuisine.options[cuisine.selectedIndex].value;
+//     console.log(csOpt)
+// }
+// let diet = document.getElementById("diet");
+// diet.onchange = function () {
+//     let dtOpt = diet.options[diet.selectedIndex].value;
+//     console.log(dtOpt)
+// }
+parcelHelpers.export(exports, "fetchData", ()=>fetchData);
+//****************************************Calculator****************************************//
+parcelHelpers.export(exports, "calcData", ()=>calcData);
 require("dotenv").config();
 const axios = require("axios").default;
 async function sliderData() {
@@ -582,6 +593,26 @@ async function fetchData(query, mtOpt) {
                     app_id: "9401dfa0",
                     app_key: "3b5a9089716abdccc2d61736ea16bbb3",
                     mealType: mtOpt
+                }
+            }).then((result)=>{
+                resolve(result);
+            }).catch((result)=>{
+                reject(result);
+            });
+        });
+    } catch (e) {
+        console.log(e);
+    }
+}
+async function calcData(calcInputText) {
+    try {
+        return new Promise(async (resolve, reject)=>{
+            await axios.get("https://api.edamam.com/auto-complete", {
+                params: {
+                    ingr: calcInputText,
+                    app_id: undefined,
+                    app_key: undefined,
+                    limit: 1
                 }
             }).then((result)=>{
                 resolve(result);
