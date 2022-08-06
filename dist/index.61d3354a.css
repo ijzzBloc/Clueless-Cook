@@ -67,7 +67,6 @@
 .slide {
   min-height: 200px;
   width: 300px;
-  background-color: var(--darkcolor);
   border: 1px solid #0000004d;
   border-radius: .3rem;
   margin: 0;
@@ -86,7 +85,6 @@
 }
 
 .slide-header {
-  background-color: var(--darkcolor);
   margin-bottom: .3rem;
   overflow: hidden;
 }
@@ -96,28 +94,21 @@
   aspect-ratio: 16 / 9;
   object-fit: cover;
   object-position: center;
+  border-bottom: 1px solid #0000004d;
   display: block;
 }
 
 .slide-body > p {
-  background-color: var(--darkcolor);
-  color: #f5f5f5;
   padding-left: 1em;
 }
 
 .slide-footer {
   white-space: nowrap;
-  background-color: var(--darkcolor);
   justify-content: space-between;
   margin-bottom: .3rem;
   padding-left: 1em;
   padding-right: 1em;
   display: flex;
-}
-
-.slfdiv > p, .slfdiv > i {
-  background-color: var(--darkcolor);
-  color: #f5f5f5;
 }
 
 .searchbar-container {
@@ -243,6 +234,7 @@
   aspect-ratio: 16 / 9;
   object-fit: cover;
   object-position: center;
+  border-bottom: 1px solid #0000004d;
   display: block;
 }
 

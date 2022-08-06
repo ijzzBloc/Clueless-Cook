@@ -1,14 +1,12 @@
 .kcal-container {
   width: 100vw;
   height: 75vh;
-  border: 1px solid red;
   display: flex;
 }
 
 .kcal-inner-container {
   height: inherit;
   width: auto;
-  border: 1px solid #ff0;
   flex-direction: column;
   margin-left: 20%;
   padding-top: 3.5vh;
