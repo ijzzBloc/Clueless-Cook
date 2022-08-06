@@ -558,7 +558,7 @@ async function sliderData() {
                 params: {
                     type: "public",
                     q: "salad",
-                    app_id: "9401dfa0",
+                    app_id: undefined,
                     app_key: "3b5a9089716abdccc2d61736ea16bbb3",
                     random: "true",
                     health: "vegan"
@@ -590,7 +590,7 @@ async function fetchData(query, mtOpt) {
                 params: {
                     type: "public",
                     q: query,
-                    app_id: "9401dfa0",
+                    app_id: undefined,
                     app_key: "3b5a9089716abdccc2d61736ea16bbb3",
                     mealType: mtOpt
                 }
@@ -607,12 +607,11 @@ async function fetchData(query, mtOpt) {
 async function calcData(calcInputText) {
     try {
         return new Promise(async (resolve, reject)=>{
-            await axios.get("https://api.edamam.com/auto-complete", {
+            await axios.get("https://api.edamam.com/api/food-database/v2/parser", {
                 params: {
                     ingr: calcInputText,
-                    app_id: undefined,
-                    app_key: undefined,
-                    limit: 1
+                    app_id: "39a76668",
+                    app_key: "727493ac0a03419c81e0ac318fdd1fe3"
                 }
             }).then((result)=>{
                 resolve(result);

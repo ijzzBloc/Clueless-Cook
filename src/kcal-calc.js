@@ -7,7 +7,7 @@ calcSubmit.addEventListener('click', () => {
     if (calcInputText !== "") {
         calcData(calcInputText).then((result) => {
             let kcalResult = result;
-            console.log(kcalResult)
+            console.log(kcalResult.data.parsed)
         })
             .catch(reason => {
                 alert(reason)

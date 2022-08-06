@@ -77,14 +77,13 @@ export async function fetchData(query, mtOpt) {
 export async function calcData(calcInputText) {
     try {
         return new Promise(async (resolve, reject) => {
-            await axios.get('https://api.edamam.com/auto-complete',
+            await axios.get('https://api.edamam.com/api/food-database/v2/parser',
                 {
                     params:
                         {
                             ingr: calcInputText,
                             app_id: process.env.ID_CALC,
                             app_key: process.env.KEY_CALC,
-                            limit: 1,
                         }
                 }).then((result) => {
                 resolve(result)

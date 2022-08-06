@@ -539,7 +539,7 @@ calcSubmit.addEventListener("click", ()=>{
     let calcInputText = calcInput.value;
     if (calcInputText !== "") (0, _main.calcData)(calcInputText).then((result)=>{
         let kcalResult = result;
-        console.log(kcalResult);
+        console.log(kcalResult.data.parsed);
     }).catch((reason)=>{
         alert(reason);
     });
