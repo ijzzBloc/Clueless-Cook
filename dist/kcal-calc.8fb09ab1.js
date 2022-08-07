@@ -544,7 +544,7 @@ calcSubmit.addEventListener("click", ()=>{
         console.log(kcalResult.data.parsed);
         let kcalHTML = "";
         let kcalObject = kcalResult.data.parsed;
-        kcalHTML += '<div id="info">\n<table class="resultstable">\n<tr>\n<th>Product</th>\n<th>Quantity</th>\n<th>Label</th>\n</tr>\n<tr>\n<td>Mars</td>\n<td>60</td>\n<td>Gram</td>\n</tr>\n</table>\n</div>';
+        kcalHTML += '<div id="info">\n<table class="resultstable">\n<tr>\n<th>Product</th>\n<th>Quantity</th>\n<th>Unit</th>\n</tr>\n<tr>\n<td>' + kcalObject[0].food.label + "</td>\n" + "<td>" + kcalObject[0].quantity + "</td>\n" + "<td>" + kcalObject[0].measure.label + "</td>\n" + "</tr>\n" + "</table>\n" + "</div>";
         infoContainer.innerHTML = kcalHTML;
     }).catch((reason)=>{
         alert(reason);

@@ -18,12 +18,12 @@ calcSubmit.addEventListener('click', () => {
                         '<tr>\n' +
                             '<th>Product</th>\n' +
                             '<th>Quantity</th>\n' +
-                            '<th>Label</th>\n' +
+                            '<th>Unit</th>\n' +
                         '</tr>\n' +
                         '<tr>\n' +
-                            '<td>Mars</td>\n' +
-                            '<td>60</td>\n' +
-                            '<td>Gram</td>\n' +
+                            '<td>'+ kcalObject[0].food.label +'</td>\n' +
+                            '<td>'+ kcalObject[0].quantity +'</td>\n' +
+                            '<td>'+ kcalObject[0].measure.label +'</td>\n' +
                         '</tr>\n' +
                     '</table>\n' +
                 '</div>'
