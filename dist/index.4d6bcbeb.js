@@ -573,6 +573,18 @@ let mtOpt = document.getElementById("meal-type");
 mtOpt.onchange = function() {
     console.log(mtOpt.options[mtOpt.selectedIndex].value);
 };
+let csOpt = document.getElementById("cuisine");
+csOpt.onchange = function() {
+    console.log(csOpt.options[csOpt.selectedIndex].value);
+};
+let dtOpt = document.getElementById("diet");
+dtOpt.onchange = function() {
+    console.log(dtOpt.options[dtOpt.selectedIndex].value);
+};
+let tmOpt = document.getElementById("time");
+tmOpt.onchange = function() {
+    console.log(tmOpt.options[tmOpt.selectedIndex].value);
+};
 async function fetchData(query) {
     try {
         return new Promise(async (resolve, reject)=>{
@@ -582,7 +594,10 @@ async function fetchData(query) {
                     q: query,
                     app_id: "9401dfa0",
                     app_key: "3b5a9089716abdccc2d61736ea16bbb3",
-                    mealType: mtOpt.value
+                    mealType: mtOpt.value,
+                    cuisineType: csOpt.value,
+                    diet: dtOpt.value,
+                    time: tmOpt.value
                 }
             }).then((result)=>{
                 resolve(result);
