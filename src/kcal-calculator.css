@@ -12,17 +12,21 @@
     padding-top: 3.5vh;
     width: auto;
 }
-.title  {
+
+.title {
     padding-bottom: 5vh;
 }
-.title > h2  {
+
+.title > h2 {
     color: var(--darkcolor);
 }
-.kcalsearchcontainer    {
+
+.kcalsearchcontainer {
     display: flex;
     padding-bottom: 3vh;
 }
-.kcalsearchbox  {
+
+.kcalsearchbox {
     height: 3rem;
     display: flex;
     border: 1px black solid;
@@ -33,19 +37,23 @@
     padding-right: 1rem;
     border-radius: 0.3rem;
 }
+
 #kcalsearch {
     border: none;
     height: 38px;
     width: 15rem;
     outline: none;
 }
-#kcalsearch:hover   {
+
+#kcalsearch:hover {
     cursor: pointer;
- }
-#kcalsearch:focus::placeholder  {
+}
+
+#kcalsearch:focus::placeholder {
     color: transparent;
     transition: 0.5s;
 }
+
 .searchbttn {
     display: flex;
     justify-content: center;
@@ -54,30 +62,36 @@
     width: 8rem;
     border-radius: 0.3rem;
 }
-#kcal-search-bttn   {
+
+#kcal-search-bttn {
     margin-left: 2rem;
 }
-.searchbttn:hover, .searchbttn:hover > p  {
+
+.searchbttn:hover, .searchbttn:hover > p {
     cursor: pointer;
     background-color: var(--lighthovercolor);
 }
-.serving-bar    {
+
+.serving-bar {
     height: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-bottom: 3vh;
 }
-#servingamount  {
+
+#servingamount {
     height: 40px;
     border-radius: 0.3rem;
     width: 6rem;
     text-align: center;
 }
-#servingamount:hover    {
+
+#servingamount:hover {
     cursor: pointer;
 }
-.addbttn    {
+
+.addbttn {
     display: flex;
     background-color: var(--lightcolor);
     border-radius: 0.3rem;
@@ -86,25 +100,25 @@
     justify-content: center;
     align-items: center;
 }
-.addbttn:hover, .addbttn:hover > p  {
+
+.addbttn:hover, .addbttn:hover > p {
     cursor: pointer;
     background-color: var(--lighthovercolor);
 }
 
-
-
-
-
-
-
+#info-container {
+    min-height: 10rem;
+}
 
 
 .kcal-info-table > table {
     margin-top: 1rem;
     color: black;
 }
+
 .kcal-results {
 }
+
 .resultstable {
     display: flex;
     width: auto;
@@ -113,5 +127,6 @@
     color: var(--darkcolor);
     padding-bottom: 3vh;
 }
-.resultstable > td  {
+
+.resultstable > td {
 }

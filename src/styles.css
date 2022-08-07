@@ -98,12 +98,12 @@ a {
 .fa-brands {
     color: var(--lightcolor);
     width: 3rem;
-    background-color: inherit;
+    background: none;
     padding-bottom: 2rem;
 }
 
 .fa-brands:hover {
     transition: 0.5s;
     transform: scale(150%);
-    color: hsl(204, 57%, 59%);
+    color: var(--lighthovercolor);
 }

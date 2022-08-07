@@ -97,12 +97,12 @@ a {
 .fa-brands {
   color: var(--lightcolor);
   width: 3rem;
-  background-color: inherit;
+  background: none;
   padding-bottom: 2rem;
 }
 
 .fa-brands:hover {
-  color: #5ba2d2;
+  color: var(--lighthovercolor);
   transition: all .5s;
   transform: scale(1.5);
 }
