@@ -536,16 +536,6 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 //****************************************Slider****************************************//
 parcelHelpers.export(exports, "sliderData", ()=>sliderData);
-// let cuisine = document.getElementById("cuisine");
-// cuisine.onchange = function () {
-//     let csOpt = cuisine.options[cuisine.selectedIndex].value;
-//     console.log(csOpt)
-// }
-// let diet = document.getElementById("diet");
-// diet.onchange = function () {
-//     let dtOpt = diet.options[diet.selectedIndex].value;
-//     console.log(dtOpt)
-// }
 parcelHelpers.export(exports, "fetchData", ()=>fetchData);
 //****************************************Calculator****************************************//
 parcelHelpers.export(exports, "calcData", ()=>calcData);
@@ -574,16 +564,16 @@ async function sliderData() {
     }
 }
 //****************************************Search****************************************//
-// let mealType = document.getElementById("meal-type");
-// let mtOpt = mealType.options[mealType.selectedIndex].value;
-// mealType.addEventListener('onchange', function(){
-// })
-let mealType = document.getElementById("meal-type");
-mealType.onchange = function() {
-    let mtOpt = mealType.options[mealType.selectedIndex].value;
-    console.log(mtOpt);
+// let mealSel = document.getElementById("meal-type");
+// mealSel.onchange = function () {
+//     let mtOpt = mealSel.options[mealSel.selectedIndex].value;
+//     console.log(mtOpt)
+// }
+let mtOpt = document.getElementById("meal-type");
+mtOpt.onchange = function() {
+    console.log(mtOpt.options[mtOpt.selectedIndex].value);
 };
-async function fetchData(query, mtOpt) {
+async function fetchData(query) {
     try {
         return new Promise(async (resolve, reject)=>{
             await axios.get("https://api.edamam.com/api/recipes/v2", {
@@ -592,7 +582,7 @@ async function fetchData(query, mtOpt) {
                     q: query,
                     app_id: "9401dfa0",
                     app_key: "3b5a9089716abdccc2d61736ea16bbb3",
-                    mealType: mtOpt
+                    mealType: mtOpt.value
                 }
             }).then((result)=>{
                 resolve(result);
