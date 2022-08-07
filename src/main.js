@@ -1,5 +1,7 @@
 require('dotenv').config()
 const axios = require('axios').default;
+import {calcId} from "./calckey";
+import {calcKey} from "./calckey";
 
 
 //****************************************Slider****************************************//
@@ -82,8 +84,8 @@ export async function calcData(calcInputText) {
                     params:
                         {
                             ingr: calcInputText,
-                            app_id: process.env.ID_CALC,
-                            app_key: process.env.KEY_CALC,
+                            app_id: calcId,
+                            app_key: calcKey,
                         }
                 }).then((result) => {
                 resolve(result)

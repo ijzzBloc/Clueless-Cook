@@ -549,6 +549,7 @@ parcelHelpers.export(exports, "sliderData", ()=>sliderData);
 parcelHelpers.export(exports, "fetchData", ()=>fetchData);
 //****************************************Calculator****************************************//
 parcelHelpers.export(exports, "calcData", ()=>calcData);
+var _calckey = require("./calckey");
 require("dotenv").config();
 const axios = require("axios").default;
 async function sliderData() {
@@ -610,8 +611,8 @@ async function calcData(calcInputText) {
             await axios.get("https://api.edamam.com/api/food-database/v2/parser", {
                 params: {
                     ingr: calcInputText,
-                    app_id: undefined,
-                    app_key: undefined
+                    app_id: (0, _calckey.calcId),
+                    app_key: (0, _calckey.calcKey)
                 }
             }).then((result)=>{
                 resolve(result);
@@ -624,7 +625,7 @@ async function calcData(calcInputText) {
     }
 }
 
-},{"dotenv":"lErsX","axios":"jo6P5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lErsX":[function(require,module,exports) {
+},{"dotenv":"lErsX","axios":"jo6P5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./calckey":"lOYju"}],"lErsX":[function(require,module,exports) {
 var process = require("process");
 const fs = require("fs");
 const path = require("path");
@@ -4566,6 +4567,10 @@ exports.export = function(dest, destName, get) {
         get: get
     });
 };
+
+},{}],"lOYju":[function(require,module,exports) {
+calcID = "39a76668";
+calcKey = "727493ac0a03419c81e0ac318fdd1fe3";
 
 },{}]},["8TtF2","gLLPy"], "gLLPy", "parcelRequire549b")
 
