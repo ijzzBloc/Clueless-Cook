@@ -9,16 +9,11 @@
 
 .hero-text {
   color: #f5f5f5;
+  text-shadow: 0 0 1px #000, 0 0 4px #000;
   background: none;
   margin-left: 20%;
   margin-right: 20%;
   font-size: 3rem;
-}
-
-.random-search {
-  background: none;
-  margin-left: 20%;
-  margin-right: 20%;
 }
 
 .random-recipes-bttn {

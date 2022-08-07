@@ -14,12 +14,7 @@
     margin-right: 20%;
     color: whitesmoke;
     font-size: 3rem;
-}
-
-.random-search {
-    background: none;
-    margin-left: 20%;
-    margin-right: 20%;
+    text-shadow: 0 0 1px black, 0 0 4px black;
 }
 
 .random-recipes-bttn {
