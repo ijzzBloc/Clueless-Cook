@@ -16,20 +16,6 @@
   font-size: 3rem;
 }
 
-.random-recipes-bttn {
-  width: 8rem;
-  height: 2rem;
-  background-color: var(--lightcolor);
-  border: 1px solid #0000004d;
-  border-radius: .3rem;
-  margin-top: 4rem;
-}
-
-.random-recipes-bttn:hover {
-  cursor: pointer;
-  background-color: var(--lighthovercolor);
-}
-
 .slider-container {
   height: auto;
   place-items: center;
@@ -126,6 +112,7 @@
 .search {
   width: 20%;
   min-height: 3vh;
+  text-align: center;
   border: 1px solid #0000004d;
   border-radius: .3rem;
   outline: none;
@@ -186,15 +173,19 @@
 .searh-bttn:hover, .searh-bttn:hover > p, .searh-bttn:hover > i {
   background-color: var(--lighthovercolor);
   cursor: pointer;
+  transition: all .5s;
+}
+
+.searh-bttn:active {
+  transform: scale(.85);
 }
 
 .searchresult-container {
-  min-height: 40vh;
+  min-height: 20vh;
 }
 
 .searchresult-inner-container {
   grid-row-gap: 4rem;
-  min-height: inherit;
   background-color: inherit;
   grid-template-columns: repeat(3, 30%);
   grid-auto-rows: auto;

@@ -5,8 +5,9 @@
 }
 
 .kcal-inner-container {
-  height: inherit;
+  height: auto;
   width: auto;
+  border: 1px solid #00f;
   flex-direction: column;
   margin-left: 20%;
   padding-top: 3.5vh;
@@ -41,6 +42,7 @@
 #kcalsearch {
   height: 38px;
   width: 15rem;
+  text-align: center;
   border: none;
   outline: none;
 }
@@ -70,6 +72,11 @@
 .searchbttn:hover, .searchbttn:hover > p {
   cursor: pointer;
   background-color: var(--lighthovercolor);
+  transition: all .5s;
+}
+
+.searchbttn:active {
+  transform: scale(.85);
 }
 
 .serving-bar {
@@ -84,7 +91,9 @@
   height: 40px;
   width: 6rem;
   text-align: center;
+  border: 1px solid #000;
   border-radius: .3rem;
+  outline: 0;
 }
 
 #servingamount:hover {
@@ -101,18 +110,29 @@
   display: flex;
 }
 
+.addbttn:active {
+  transform: scale(.85);
+}
+
 .addbttn:hover, .addbttn:hover > p {
   cursor: pointer;
   background-color: var(--lighthovercolor);
+  transition: all .5s;
 }
 
 #info-container {
-  min-height: 10rem;
+  min-height: auto;
 }
 
 .kcal-info-table > table {
   color: #000;
   margin-top: 1rem;
+}
+
+.kcal-results {
+  min-height: max-content;
+  background: none;
+  border: 1px solid red;
 }
 
 .resultstable {

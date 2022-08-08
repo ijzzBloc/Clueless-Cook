@@ -8,9 +8,10 @@
     display: flex;
     flex-direction: column;
     margin-left: 20%;
-    height: inherit;
+    height: auto;
     padding-top: 3.5vh;
     width: auto;
+    border: 1px blue solid;
 }
 
 .title {
@@ -43,6 +44,7 @@
     height: 38px;
     width: 15rem;
     outline: none;
+    text-align: center;
 }
 
 #kcalsearch:hover {
@@ -70,8 +72,11 @@
 .searchbttn:hover, .searchbttn:hover > p {
     cursor: pointer;
     background-color: var(--lighthovercolor);
+    transition: 0.5s;
 }
-
+.searchbttn:active  {
+    transform: scale(0.85);
+}
 .serving-bar {
     height: auto;
     display: flex;
@@ -85,12 +90,12 @@
     border-radius: 0.3rem;
     width: 6rem;
     text-align: center;
+    outline: 0;
+    border: 1px black solid;
 }
-
 #servingamount:hover {
     cursor: pointer;
 }
-
 .addbttn {
     display: flex;
     background-color: var(--lightcolor);
@@ -100,14 +105,18 @@
     justify-content: center;
     align-items: center;
 }
+.addbttn:active    {
+    transform: scale(0.85);
+}
 
 .addbttn:hover, .addbttn:hover > p {
     cursor: pointer;
     background-color: var(--lighthovercolor);
+    transition: 0.5s;
 }
 
 #info-container {
-    min-height: 10rem;
+    min-height: auto;
 }
 
 
@@ -117,6 +126,9 @@
 }
 
 .kcal-results {
+    min-height: max-content;
+    border: 1px red solid;
+    background: none;
 }
 
 .resultstable {

@@ -17,20 +17,6 @@
     text-shadow: 0 0 5px black, 0 0 5px black;
 }
 
-.random-recipes-bttn {
-    width: 8rem;
-    height: 2rem;
-    background-color: var(--lightcolor);
-    border: rgb(0, 0, 0, 30%) 1px solid;
-    border-radius: 0.3rem;
-    margin-top: 4rem;
-}
-
-.random-recipes-bttn:hover {
-    cursor: pointer;
-    background-color: var(--lighthovercolor)
-}
-
 /*--------------------------------------Image slider--------------------------------------*/
 .slider-container {
     height: auto;
@@ -108,6 +94,7 @@
     padding-right: 1em;
     margin-bottom: 0.3rem;
 }
+
 /*--------------------------------------Searchbar--------------------------------------*/
 .searchbar-container {
     display: flex;
@@ -125,6 +112,7 @@
     margin-right: 20%;
     background-color: inherit;
 }
+
 .search {
     width: 20%;
     min-height: 3vh;
@@ -132,21 +120,26 @@
     border: rgb(0, 0, 0, 30%) 1px solid;
     font-size: 1em;
     outline: none;
+    text-align: center;
 }
-.search:hover   {
+
+.search:hover {
     cursor: pointer;
 }
+
 .search::placeholder {
     color: black;
     text-align: center;
 }
-.search:focus::placeholder  {
+.search:focus::placeholder {
     color: transparent;
     transition: 0.5s;
 }
+
 .dropdown {
     background-color: var(--darkcolor);
 }
+
 .dropdown-selection {
     width: 8vw;
     min-height: 3vh;
@@ -155,7 +148,8 @@
     border: rgb(0, 0, 0, 30%) 1px solid;
     font-size: 0.9em;
 }
-.dropdown-selection:hover   {
+
+.dropdown-selection:hover {
     cursor: pointer;
 }
 
@@ -182,11 +176,15 @@
 .searh-bttn:hover, .searh-bttn:hover > p, .searh-bttn:hover > i {
     background-color: var(--lighthovercolor);
     cursor: pointer;
+    transition: 0.5s;
+}
+.searh-bttn:active  {
+    transform: scale(0.85);
 }
 
 /*------------------------------Search results--------------------------------------*/
 .searchresult-container {
-    min-height: 40vh;
+    min-height: 20vh;
 }
 
 .searchresult-inner-container {
@@ -197,7 +195,6 @@
     justify-content: space-between;
     align-items: center;
     align-content: center;
-    min-height: inherit;
     margin-left: 20%;
     margin-right: 20%;
     background-color: inherit;

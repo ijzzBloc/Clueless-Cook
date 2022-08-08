@@ -15,7 +15,7 @@ sliderData().then((result) => {
             // console.log(slideResult.data.hits[i].recipe)
             let slideObject = slideResult.data.hits[i].recipe;
             TrackHTML +=
-                '<div class="slide">\n' +
+                '<div class="slide" id="slide">\n' +
                 '<div class="slide-header slide-image">\n' +
                 '<img alt="" src=' + slideObject.image + '>\n' +
                 '</div>\n' +
@@ -33,6 +33,15 @@ sliderData().then((result) => {
                 '</div>'
         }
         slideTrack.innerHTML = TrackHTML;
+        // function handleClick() {
+        //     console.log('test');
+        // }
+        // slideResult.data.hits[i].recipe.addEventListener('click', handClick)
+        // function handleClick() {
+        //     console.log('test');
+        // }
+        // let test = document.getElementById(slide)
+        // test.addEventListener('click', handleClick)
     }
 })
 //****************************************Search****************************************//

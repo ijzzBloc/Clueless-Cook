@@ -545,9 +545,18 @@ let slideTrack = document.getElementById("slide-track");
         for(let i = 0; i < slideResultCount; i++){
             // console.log(slideResult.data.hits[i].recipe)
             let slideObject = slideResult.data.hits[i].recipe;
-            TrackHTML += '<div class="slide">\n<div class="slide-header slide-image">\n<img alt="" src=' + slideObject.image + ">\n" + "</div>\n" + '<div class="slide-body">\n' + "<p>" + slideObject.label + "</p>\n" + "</div>\n" + '<div class="slide-footer">\n' + '<div class="slfdiv">\n' + "<p>" + Math.trunc(slideObject.calories) + ".Kcal&nbsp;|&nbsp;" + slideObject.ingredients.length + ".Ingredients</p>\n" + "</div>\n" + '<div class="slfdiv">\n' + '<p class="slfdiv"><i class="fa-solid fa-clock-rotate-left"></i>' + slideObject.totalTime + "</p>\n" + "</div>\n" + "</div>\n" + "</div>";
+            TrackHTML += '<div class="slide" id="slide">\n<div class="slide-header slide-image">\n<img alt="" src=' + slideObject.image + ">\n" + "</div>\n" + '<div class="slide-body">\n' + "<p>" + slideObject.label + "</p>\n" + "</div>\n" + '<div class="slide-footer">\n' + '<div class="slfdiv">\n' + "<p>" + Math.trunc(slideObject.calories) + ".Kcal&nbsp;|&nbsp;" + slideObject.ingredients.length + ".Ingredients</p>\n" + "</div>\n" + '<div class="slfdiv">\n' + '<p class="slfdiv"><i class="fa-solid fa-clock-rotate-left"></i>' + slideObject.totalTime + "</p>\n" + "</div>\n" + "</div>\n" + "</div>";
         }
         slideTrack.innerHTML = TrackHTML;
+    // function handleClick() {
+    //     console.log('test');
+    // }
+    // slideResult.data.hits[i].recipe.addEventListener('click', handClick)
+    // function handleClick() {
+    //     console.log('test');
+    // }
+    // let test = document.getElementById(slide)
+    // test.addEventListener('click', handleClick)
     }
 });
 let userInput = document.getElementById("search");

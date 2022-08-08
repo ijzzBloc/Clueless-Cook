@@ -564,11 +564,6 @@ async function sliderData() {
     }
 }
 //****************************************Search****************************************//
-// let mealSel = document.getElementById("meal-type");
-// mealSel.onchange = function () {
-//     let mtOpt = mealSel.options[mealSel.selectedIndex].value;
-//     console.log(mtOpt)
-// }
 let mtOpt = document.getElementById("meal-type");
 mtOpt.onchange = function() {
     console.log(mtOpt.options[mtOpt.selectedIndex].value);
