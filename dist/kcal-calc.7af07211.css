@@ -81,10 +81,14 @@
 
 .serving-bar {
   height: auto;
-  justify-content: space-between;
   align-items: center;
+  padding-top: 3vh;
   padding-bottom: 3vh;
   display: flex;
+}
+
+.serving-bar > div {
+  margin-right: 3rem;
 }
 
 #servingamount {
