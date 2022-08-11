@@ -132,14 +132,28 @@
 .kcal-results {
   min-height: max-content;
   background: none;
-  border: 1px solid red;
 }
 
 .resultstable {
   width: auto;
-  border-spacing: 1rem;
-  text-align: center;
   color: var(--darkcolor);
+  text-align: left;
+  border-collapse: collapse;
+  border: #00f;
+  display: flex;
+}
+
+th, td {
+  width: 10rem;
+}
+
+.totaltable {
+  width: auto;
+  color: var(--darkcolor);
+  text-align: left;
+  border-collapse: collapse;
+  border: #00f;
+  border-top: 1px var(--darkcolor) solid;
   padding-bottom: 3vh;
   display: flex;
 }

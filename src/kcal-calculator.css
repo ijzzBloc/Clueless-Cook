@@ -127,18 +127,32 @@
 
 .kcal-results {
     min-height: max-content;
-    border: 1px red solid;
+    /*border: 1px red solid;*/
     background: none;
 }
 
 .resultstable {
     display: flex;
     width: auto;
-    border-spacing: 1rem;
-    text-align: center;
+    /*border-spacing: 2rem;*/
+    border: blue;
+    /*text-align: center;*/
+    color: var(--darkcolor);
+    text-align: left;
+    border-collapse:collapse;
+}
+th, td  {
+    width: 10rem;
+}
+.totaltable {
+    display: flex;
+    width: auto;
+    /*border-spacing: 2rem;*/
+    border: blue;
+    /*text-align: center;*/
     color: var(--darkcolor);
     padding-bottom: 3vh;
-}
-
-.resultstable > td {
+    text-align: left;
+    border-collapse:collapse;
+    border-top: 1px var(--darkcolor) solid;
 }
