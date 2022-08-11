@@ -36,67 +36,73 @@
     <!----------------------------------------Search bar---------------------------------------->
     <section class="searchbar-container">
         <section class="searchbar-inner-container">
-            <input aria-label="search" autocomplete="off" class="search" id="search" name="search" placeholder="&nbsp;Type in a ingredient" type="text">
-            <label class="dropdown" for="meal-type">
-                <select class="dropdown-selection" id="meal-type" name="meal-type">
-                    <option disabled="" selected="">Meal Type</option>
-                    <option value="Breakfast">Breakfast</option>
-                    <option value="Lunch">Lunch</option>
-                    <option value="Dinner">Dinner</option>
-                    <option value="Snack">Snack</option>
-                    <option value="Tea-time">Tea time</option>
-                </select>
-            </label>
-            <label class="dropdown" for="cuisine">
-                <select class="dropdown-selection" id="cuisine" name="cuisine">
-                    <option disabled="" selected="">Cuisine</option>
-                    <option value="American">American</option>
-                    <option value="Asian">Asian</option>
-                    <option value="British">British</option>
-                    <option value="Caribbean">Caribbean</option>
-                    <option value="Central Europe">Central Europe</option>
-                    <option value="Chinese">Chinese</option>
-                    <option value="Eastern Europe">Eastern Europe</option>
-                    <option value="French">French</option>
-                    <option value="Indian">Indian</option>
-                    <option value="Italian">Italian</option>
-                    <option value="Japanese">Japanese</option>
-                    <option value="Kosher">Kosher</option>
-                    <option value="Mediterranean">Mediterranean</option>
-                    <option value="Mexican">Mexican</option>
-                    <option value="Middle Eastern">Middle Eastern</option>
-                    <option value="Nordic">Nordic</option>
-                    <option value="South American">South American</option>
-                    <option value="South East Asian">South East Asian</option>
-                </select>
-            </label>
-            <label class="dropdown" for="diet">
-                <select class="dropdown-selection" id="diet" name="diet">
-                    <option disabled="" selected="">Diet</option>
-                    <option value="balanced">Balanced</option>
-                    <option value="high-fiber">High-fiber</option>
-                    <option value="high-protein">High-protein</option>
-                    <option value="low-carb">Low-carb</option>
-                    <option value="low-fat">Low-fat</option>
-                    <option value="low-sodium">Low-sodium</option>
-                </select>
-            </label>
-            <label class="dropdown" for="time">
-                <select class="dropdown-selection" name="time" id="time">
-                    <option disabled="" selected="">Time</option>
-                    <option value="0-300">All</option>
-                    <option value="1-10">10mins</option>
-                    <option value="10-20">10-20mins.</option>
-                    <option value="20-30">20-30mins.</option>
-                    <option value="30-45">30-45mins.</option>
-                    <option value="45-60">45-60mins.</option>
-                    <option value="60-300">60+mins.</option>
-                </select>
-            </label>
-            <button class="searh-bttn" id="search-bttn" type="button">
-                <p>Search</p>
-                <i class="fa-solid fa-arrow-right-long"></i>
-            </button>
+            <div class="search-box">
+                <input aria-label="search" autocomplete="off" class="search" id="search" name="search" placeholder="&nbsp;Type in a ingredient" type="text">
+                <div class="tooltip" data-tooltip="example"></div>
+                <div class="fa-solid fa-magnifying-glass fa-xl"></div>
+            </div>
+            <div class="selection-box">
+                <label class="dropdown" for="meal-type">
+                    <select class="dropdown-selection" id="meal-type" name="meal-type">
+                        <option disabled="" selected="">Meal Type</option>
+                        <option value="Breakfast">Breakfast</option>
+                        <option value="Lunch">Lunch</option>
+                        <option value="Dinner">Dinner</option>
+                        <option value="Snack">Snack</option>
+                        <option value="Tea-time">Tea time</option>
+                    </select>
+                </label>
+                <label class="dropdown" for="cuisine">
+                    <select class="dropdown-selection" id="cuisine" name="cuisine">
+                        <option disabled="" selected="">Cuisine</option>
+                        <option value="American">American</option>
+                        <option value="Asian">Asian</option>
+                        <option value="British">British</option>
+                        <option value="Caribbean">Caribbean</option>
+                        <option value="Central Europe">Central Europe</option>
+                        <option value="Chinese">Chinese</option>
+                        <option value="Eastern Europe">Eastern Europe</option>
+                        <option value="French">French</option>
+                        <option value="Indian">Indian</option>
+                        <option value="Italian">Italian</option>
+                        <option value="Japanese">Japanese</option>
+                        <option value="Kosher">Kosher</option>
+                        <option value="Mediterranean">Mediterranean</option>
+                        <option value="Mexican">Mexican</option>
+                        <option value="Middle Eastern">Middle Eastern</option>
+                        <option value="Nordic">Nordic</option>
+                        <option value="South American">South American</option>
+                        <option value="South East Asian">South East Asian</option>
+                    </select>
+                </label>
+                <label class="dropdown" for="diet">
+                    <select class="dropdown-selection" id="diet" name="diet">
+                        <option disabled="" selected="">Diet</option>
+                        <option value="balanced">Balanced</option>
+                        <option value="high-fiber">High-fiber</option>
+                        <option value="high-protein">High-protein</option>
+                        <option value="low-carb">Low-carb</option>
+                        <option value="low-fat">Low-fat</option>
+                        <option value="low-sodium">Low-sodium</option>
+                    </select>
+                </label>
+                <label class="dropdown" for="time">
+                    <select class="dropdown-selection" id="time" name="time">
+                        <option disabled="" selected="">Time</option>
+                        <option value="0-300">All</option>
+                        <option value="1-10">10mins</option>
+                        <option value="10-20">10-20mins.</option>
+                        <option value="20-30">20-30mins.</option>
+                        <option value="30-45">30-45mins.</option>
+                        <option value="45-60">45-60mins.</option>
+                        <option value="60-300">60+mins.</option>
+                    </select>
+                </label>
+                <button class="searh-bttn" id="search-bttn" type="button">
+                    <p>Search</p>
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                </button>
+            </div>
         </section>
     </section>
     <!----------------------------------------Search results---------------------------------------->
