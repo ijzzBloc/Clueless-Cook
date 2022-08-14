@@ -5,10 +5,11 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>kcal calculator</title>
     <link href="https://fonts.googleapis.com" rel="preconnect">
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
-    <link href="https://fonts.googleapis.com/css2?family=Babylonica&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link href="/index.4d663569.css" rel="stylesheet">
-    <link href="/kcal-calc.7af07211.css" rel="stylesheet">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Babylonica&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <link href="calculator.css" rel="stylesheet">
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/a01587ee71.js"></script>
 </head>
 <body>
@@ -16,9 +17,9 @@
 <header class="header-container">
     <p class="header-item header-item-1">The Clueless Cook</p>
     <div class="header-item header-item-2">
-        <a class="navbar-a" href="/home.html">home</a>
-        <a class="navbar-a" href="/recipe-detail.html">about</a>
-        <a class="navbar-a" href="/calculator.html">calculator</a>
+        <a class="navbar-a" href="home.html">home</a>
+        <a class="navbar-a" href="recipe-detail.html">about</a>
+        <a class="navbar-a" href="calculator.html">calculator</a>
     </div>
 </header>
 <!----------------------------------------Main---------------------------------------->
@@ -29,7 +30,8 @@
         </div>
         <section class="kcalsearchcontainer">
             <div class="kcalsearchbox">
-                <input aria-label="kcalsrchtxt" id="kcalsearch" placeholder="Enter product" type="text"><i class="fa-solid fa-magnifying-glass"></i>
+                <input aria-label="kcalsrchtxt" id="kcalsearch" placeholder="Enter product" type="text"><i
+                    class="fa-solid fa-magnifying-glass"></i>
             </div>
             <div class="searchbttn" id="kcal-search-bttn">
                 <p class="searchbttn">Search&nbsp;&nbsp;→</p>
@@ -136,7 +138,7 @@
         </section>
     </section>
 </footer>
-<script src="/index.4d6bcbeb.js" defer=""></script>
-<script src="/kcal-calc.8fb09ab1.js" defer=""></script>
+<script src="main.js" type="module"></script>
+<script src="calculator.js" type="module"></script>
 </body>
 </html>

@@ -1,0 +1,165 @@
+.kcal-container {
+  width: 100vw;
+  height: 75vh;
+  display: flex;
+}
+
+.kcal-inner-container {
+  height: auto;
+  width: auto;
+  border: 1px solid #00f;
+  flex-direction: column;
+  margin-left: 20%;
+  padding-top: 3.5vh;
+  display: flex;
+}
+
+.title {
+  padding-bottom: 5vh;
+}
+
+.title > h2 {
+  color: var(--darkcolor);
+}
+
+.kcalsearchcontainer {
+  padding-bottom: 3vh;
+  display: flex;
+}
+
+.kcalsearchbox {
+  height: 3rem;
+  width: max-content;
+  border: 1px solid #000;
+  border-radius: .3rem;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+}
+
+#kcalsearch {
+  height: 38px;
+  width: 15rem;
+  text-align: center;
+  border: none;
+  outline: none;
+}
+
+#kcalsearch:hover {
+  cursor: pointer;
+}
+
+#kcalsearch:focus::placeholder {
+  color: #0000;
+  transition: all .5s;
+}
+
+.searchbttn {
+  background-color: var(--lightcolor);
+  width: 8rem;
+  border-radius: .3rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+#kcal-search-bttn {
+  margin-left: 2rem;
+}
+
+.searchbttn:hover, .searchbttn:hover > p {
+  cursor: pointer;
+  background-color: var(--lighthovercolor);
+  transition: all .5s;
+}
+
+.searchbttn:active {
+  transform: scale(.85);
+}
+
+.serving-bar {
+  height: auto;
+  align-items: center;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  display: flex;
+}
+
+.serving-bar > div {
+  margin-right: 3rem;
+}
+
+#servingamount {
+  height: 40px;
+  width: 6rem;
+  text-align: center;
+  border: 1px solid #000;
+  border-radius: .3rem;
+  outline: 0;
+}
+
+#servingamount:hover {
+  cursor: pointer;
+}
+
+.addbttn {
+  background-color: var(--lightcolor);
+  width: 5rem;
+  border-radius: .3rem;
+  justify-content: center;
+  align-items: center;
+  padding: .2rem;
+  display: flex;
+}
+
+.addbttn:active {
+  transform: scale(.85);
+}
+
+.addbttn:hover, .addbttn:hover > p {
+  cursor: pointer;
+  background-color: var(--lighthovercolor);
+  transition: all .5s;
+}
+
+#info-container {
+  min-height: auto;
+}
+
+.kcal-info-table > table {
+  color: #000;
+  margin-top: 1rem;
+}
+
+.kcal-results {
+  min-height: max-content;
+  background: none;
+}
+
+.resultstable {
+  width: auto;
+  color: var(--darkcolor);
+  text-align: left;
+  border-collapse: collapse;
+  border: #00f;
+  display: flex;
+}
+
+th, td {
+  width: 10rem;
+}
+
+.totaltable {
+  width: auto;
+  color: var(--darkcolor);
+  text-align: left;
+  border-collapse: collapse;
+  border: #00f;
+  border-top: 1px var(--darkcolor) solid;
+  padding-bottom: 3vh;
+  display: flex;
+}
+
+/*# sourceMappingURL=calculator.2bc76d9d.css.map */
