@@ -27,7 +27,25 @@
     position: relative;
     display: grid;
 }
+.slider-container::before, .slider-container::after{
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 2%;
+    right: 95%;
+    z-index: 2;
 
+}
+.slider-container::before {
+    left: 0;
+    top: 0;
+}
+.slider-container::after    {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
 .slide-track {
     display: flex;
     width: calc(300px * 20);
@@ -36,7 +54,6 @@
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
-
 @keyframes scroll {
     0% {
         transform: translatex(0);
@@ -107,11 +124,11 @@
     align-items: center;
     min-height: 12vh;
     min-width: 60%;
-    border: red 1px solid;
     margin-left: 20%;
     margin-right: 20%;
     background-color: inherit;
 }
+
 .search-box {
     display: flex;
     width: 35%;
@@ -121,9 +138,11 @@
     border: rgb(0, 0, 0, 30%) 1px solid;
     margin-right: 1rem;
 }
-.fa-magnifying-glass    {
+
+.fa-magnifying-glass {
     color: var(--darkcolor);
 }
+
 .search {
     width: 90%;
     min-height: 3vh;
@@ -131,12 +150,8 @@
     outline: none;
     text-align: center;
     border: none;
-    /*position: relative;*/
+    position: relative;
 }
-/*.tooltip::after  {*/
-/*    content: attr(data-tooltip);*/
-/*    position: absolute;*/
-/*}*/
 
 .search:hover {
     cursor: pointer;
@@ -146,17 +161,19 @@
     color: black;
     text-align: center;
 }
+
 .search:focus::placeholder {
     color: transparent;
     transition: 0.5s;
 }
 
-.selection-box  {
+.selection-box {
     display: flex;
     justify-content: flex-end;
     width: 100%;
     background: none;
 }
+
 .dropdown {
     background-color: var(--darkcolor);
     margin-right: 1rem;
@@ -200,9 +217,11 @@
     cursor: pointer;
     transition: 0.5s;
 }
-.searh-bttn:active  {
+
+.searh-bttn:active {
     transform: scale(0.85);
 }
+
 /*------------------------------Search results--------------------------------------*/
 .searchresult-container {
     min-height: 20vh;
