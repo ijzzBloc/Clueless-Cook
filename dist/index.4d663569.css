@@ -57,6 +57,10 @@
   margin: 10px;
 }
 
+.navbar-a:hover {
+  color: var(--lighthovercolor);
+}
+
 a {
   color: #000;
   background-color: #f5f5f5;
@@ -103,8 +107,10 @@ a {
 
 .fa-brands:hover {
   color: var(--lighthovercolor);
-  transition: all .5s;
-  transform: scale(1.5);
+}
+
+.fa-facebook:before {
+  content: attr(data-tooltip);
 }
 
 /*# sourceMappingURL=index.4d663569.css.map */
