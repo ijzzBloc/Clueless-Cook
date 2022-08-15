@@ -543,26 +543,23 @@ let recipeID = getParameter("recipeID");
     console.log(result.data.recipe);
     let recipeDetail = result.data.recipe;
     let recipeIMG = document.getElementById("recipe-image");
-    let ingredients = document.getElementsByClassName("instructions");
+    let ingredients = document.getElementById("instructions");
     let nutrients = document.getElementById("nutrients-table");
     let labels = document.getElementById("l-box");
     recipeIMG.innerHTML = "";
     let recipesIMGHTML = "";
     recipesIMGHTML += '<div class="recipe-image" id="recipe-image">\n<img alt="" src=' + recipeDetail.image + ">\n" + "</div>";
     recipeIMG.innerHTML = recipesIMGHTML;
-    //     let recipeIngredients = result.data.recipe.ingredients
-    //     console.log(recipeIngredients)
-    // })
     ingredients.innerHTML = "";
-    let recipeIngredients = result.data.recipe.ingredients;
-    console.log(recipeIngredients);
-    let recipeIngredientsCount = result.data.recipe.ingredients;
-    if (recipeIngredientsCount >= 1) for(let i = 0; i < recipeIngredientsCount; i++){
-        console.log(recipeIngredientsCount[i].ingredients);
-        let ingredientsObject = recipeIngredientsCount[i].ingredients;
-        console.log(ingredientsObject);
-        let ingredientsHTML = "";
-        ingredientsHTML += "<li>" + ingredientsObject + "</li>";
+    let ingredientsHTML = "";
+    let ingredientsCount = recipeDetail.ingredients.length;
+    console.log(ingredientsCount);
+    if (ingredientsCount >= 1) {
+        for(let i = 0; i < ingredientsCount; i++){
+            let ingredientsObject = result.data.recipe.ingredients[i];
+            console.log(ingredientsObject);
+            ingredientsHTML += "<li>" + ingredientsObject.text + "</li>";
+        }
         ingredients.innerHTML = ingredientsHTML;
     }
 });
