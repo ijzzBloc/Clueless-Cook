@@ -19,6 +19,8 @@
     justify-content: flex-start;
     align-items: center;
     margin-left: 1rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
 }
 
 .details-header > p {
@@ -26,10 +28,12 @@
     color: var(--darkcolor);
     margin-bottom: 0.9rem;
 }
+
 .details-header > h3 {
     color: var(--darkcolor);
     padding-right: 4vw;
 }
+
 .fa-clock-rotate-left {
     padding-right: 0.5rem;
 }
@@ -46,13 +50,16 @@
     padding: 0.5rem;
     border-radius: 0.3rem;
 }
-#article:hover  {
+
+#article:hover {
     background: var(--lighthovercolor);
 }
+
 #article:active {
     transition: 0.3s;
     transform: scale(90%);
 }
+
 .recipe-text {
     margin-left: 1rem;
     color: inherit;
@@ -68,8 +75,9 @@
     justify-content: center;
     align-items: center;
 }
+
 .recipe-image img {
-    width:300px;
+    width: 300px;
     height: auto;
 }
 
@@ -88,6 +96,7 @@
     margin-top: 1rem;
     color: inherit;
 }
+
 .nutrients-header, h4 {
     margin-top: 1rem;
     color: var(--darkcolor);
@@ -111,6 +120,7 @@
     margin-left: 20%;
     margin-right: 20%;
 }
+
 .labels-header {
     margin-left: 1rem;
     color: var(--darkcolor);
