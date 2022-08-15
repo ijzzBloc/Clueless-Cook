@@ -56,6 +56,7 @@
 }
 
 #article:active {
+  cursor: wait;
   transition: all .3s;
   transform: scale(.9);
 }

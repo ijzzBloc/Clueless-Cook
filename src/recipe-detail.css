@@ -58,6 +58,7 @@
 #article:active {
     transition: 0.3s;
     transform: scale(90%);
+    cursor: wait;
 }
 
 .recipe-text {

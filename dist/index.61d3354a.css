@@ -82,6 +82,10 @@
   transform: scale(1.2);
 }
 
+.slide:active {
+  cursor: wait;
+}
+
 .slide-track:hover {
   animation-play-state: paused;
 }
@@ -239,6 +243,7 @@
 }
 
 .searh-bttn:active {
+  cursor: wait;
   transform: scale(.85);
 }
 
