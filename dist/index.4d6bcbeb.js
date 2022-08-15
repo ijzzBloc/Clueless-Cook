@@ -536,7 +536,9 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 //****************************************Slider****************************************//
 parcelHelpers.export(exports, "sliderData", ()=>sliderData);
+//****************************************Search****************************************//
 parcelHelpers.export(exports, "fetchData", ()=>fetchData);
+parcelHelpers.export(exports, "fetchRecipe", ()=>fetchRecipe);
 //****************************************Calculator****************************************//
 parcelHelpers.export(exports, "calcData", ()=>calcData);
 require("dotenv").config();
@@ -563,24 +565,7 @@ async function sliderData() {
         console.log(e);
     }
 }
-//****************************************Search****************************************//
-let mtOpt = document.getElementById("meal-type");
-mtOpt.onchange = function() {
-    console.log(mtOpt.options[mtOpt.selectedIndex].value);
-};
-let csOpt = document.getElementById("cuisine");
-csOpt.onchange = function() {
-    console.log(csOpt.options[csOpt.selectedIndex].value);
-};
-let dtOpt = document.getElementById("diet");
-dtOpt.onchange = function() {
-    console.log(dtOpt.options[dtOpt.selectedIndex].value);
-};
-let tmOpt = document.getElementById("time");
-tmOpt.onchange = function() {
-    console.log(tmOpt.options[tmOpt.selectedIndex].value);
-};
-async function fetchData(query) {
+async function fetchData(query, mtOptValue, csOptValue, dtOptValue, tmOptValue) {
     try {
         return new Promise(async (resolve, reject)=>{
             await axios.get("https://api.edamam.com/api/recipes/v2", {
@@ -589,10 +574,29 @@ async function fetchData(query) {
                     q: query,
                     app_id: "9401dfa0",
                     app_key: "3b5a9089716abdccc2d61736ea16bbb3",
-                    mealType: mtOpt.value,
-                    cuisineType: csOpt.value,
-                    diet: dtOpt.value,
-                    time: tmOpt.value
+                    mealType: mtOptValue,
+                    cuisineType: csOptValue,
+                    diet: dtOptValue,
+                    time: tmOptValue
+                }
+            }).then((result)=>{
+                resolve(result);
+            }).catch((result)=>{
+                reject(result);
+            });
+        });
+    } catch (e) {
+        console.log(e);
+    }
+}
+async function fetchRecipe(recipeID) {
+    try {
+        return new Promise(async (resolve, reject)=>{
+            await axios.get("https://api.edamam.com/api/recipes/v2/" + recipeID, {
+                params: {
+                    type: "public",
+                    app_id: "9401dfa0",
+                    app_key: "3b5a9089716abdccc2d61736ea16bbb3"
                 }
             }).then((result)=>{
                 resolve(result);

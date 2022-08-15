@@ -133,3 +133,6 @@
     border-radius: 100vh;
     color: whitesmoke;
 }
+#instructions   {
+    border: 1px red solid;
+}

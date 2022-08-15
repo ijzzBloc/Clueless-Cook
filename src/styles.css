@@ -96,6 +96,9 @@ a {
     background-color: inherit;
     color: whitesmoke;
 }
+.footer-item > h3   {
+    padding-bottom: 0.7rem;
+}
 
 .fa-brands {
     color: var(--lightcolor);

@@ -28,23 +28,8 @@ export async function sliderData() {
     }
 }
 //****************************************Search****************************************//
-let mtOpt = document.getElementById("meal-type");
-mtOpt.onchange = function () {
-    console.log(mtOpt.options[mtOpt.selectedIndex].value)
-}
-let csOpt = document.getElementById("cuisine");
-csOpt.onchange = function () {
-    console.log(csOpt.options[csOpt.selectedIndex].value)
-}
-let dtOpt = document.getElementById("diet");
-dtOpt.onchange = function () {
-    console.log(dtOpt.options[dtOpt.selectedIndex].value)
-}
-let tmOpt = document.getElementById("time");
-tmOpt.onchange = function () {
-    console.log(tmOpt.options[tmOpt.selectedIndex].value)
-}
-export async function fetchData(query) {
+
+export async function fetchData(query, mtOptValue, csOptValue, dtOptValue, tmOptValue) {
     try {
         return new Promise(async (resolve, reject) => {
             await axios.get('https://api.edamam.com/api/recipes/v2',
@@ -55,10 +40,32 @@ export async function fetchData(query) {
                             q: query,
                             app_id: process.env.API_ID,
                             app_key: process.env.API_KEY,
-                            mealType: mtOpt.value,
-                            cuisineType: csOpt.value,
-                            diet: dtOpt.value,
-                            time: tmOpt.value,
+                            mealType: mtOptValue,
+                            cuisineType: csOptValue,
+                            diet: dtOptValue,
+                            time: tmOptValue,
+                        }
+                }).then((result) => {
+                resolve(result)
+            })
+                .catch((result) => {
+                    reject(result)
+                })
+        })
+    } catch (e) {
+        console.log(e)
+    }
+}
+export async function fetchRecipe(recipeID) {
+    try {
+        return new Promise(async (resolve, reject) => {
+            await axios.get('https://api.edamam.com/api/recipes/v2/' + recipeID,
+                {
+                    params:
+                        {
+                            type: 'public',
+                            app_id: process.env.API_ID,
+                            app_key: process.env.API_KEY,
                         }
                 }).then((result) => {
                 resolve(result)

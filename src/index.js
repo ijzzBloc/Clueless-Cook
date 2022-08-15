@@ -7,12 +7,10 @@ import {
 let slideTrack = document.getElementById('slide-track');
 sliderData().then((result) => {
     let slideResult = result;
-    // console.log(slideResult)
     let slideResultCount = slideResult.data.hits.length
     if (slideResultCount >= 1) {
         let TrackHTML = ""
         for (let i = 0; i < slideResultCount; i++) {
-            // console.log(slideResult.data.hits[i].recipe)
             let slideObject = slideResult.data.hits[i].recipe;
             TrackHTML +=
                 '<div class="slide" id="slide">\n' +
@@ -33,29 +31,27 @@ sliderData().then((result) => {
                 '</div>'
         }
         slideTrack.innerHTML = TrackHTML;
-        // function handleClick() {
-        //     console.log('test');
-        // }
-        // slideResult.data.hits[i].recipe.addEventListener('click', handClick)
-        // function handleClick() {
-        //     console.log('test');
-        // }
-        // let test = document.getElementById(slide)
-        // test.addEventListener('click', handleClick)
     }
 })
 //****************************************Search****************************************//
 import {
     fetchData
 } from "./main"
-
+let mtOpt = document.getElementById("meal-type");
+let csOpt = document.getElementById("cuisine");
+let dtOpt = document.getElementById("diet");
+let tmOpt = document.getElementById("time");
 let userInput = document.getElementById('search');
 let searchSubmit = document.getElementById('search-bttn')
 let searchContainer = document.getElementById('searchresult-inner-container')
 searchSubmit.addEventListener('click', () => {
     let userInputText = userInput.value;
+    let mtOptValue = mtOpt.value
+    let csOptValue = csOpt.value
+    let dtOptValue = dtOpt.value
+    let tmOptValue = tmOpt.value
     if (userInputText !== "") {
-        fetchData(userInputText).then((result) => {
+        fetchData(userInputText, mtOptValue, csOptValue, dtOptValue, tmOptValue).then((result) => {
             searchContainer.innerHTML = "";
             let recipesResult = result;
             console.log(recipesResult)
@@ -65,8 +61,12 @@ searchSubmit.addEventListener('click', () => {
                 for (let i = 0; i < recipesResultCount; i++) {
                     console.log(recipesResult.data.hits[i].recipe)
                     let recipeObject = recipesResult.data.hits[i].recipe;
+                    let recipeDetail = recipeObject.uri
+                    let recipeDetailArray = recipeDetail.split('_')
+                    let recipeDetailId = recipeDetailArray[1]
+                    console.log(recipeDetailId)
                     recipesHTML +=
-                        '<a href="recipe-detail.html" class="card card-1" id="card">\n' +
+                        '<a href="recipe-detail.html?recipeID=' + recipeDetailId + '" class="card card-1" id="card">\n' +
                         ' <div class="card-header card-image">\n' +
                         '    <img alt="" src=' + recipeObject.image + '>\n' +
                         '     </div>\n' +

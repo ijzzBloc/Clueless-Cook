@@ -142,14 +142,14 @@
       this[globalName] = mainExports;
     }
   }
-})({"ShInH":[function(require,module,exports) {
+})({"iMehg":[function(require,module,exports) {
 "use strict";
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
-module.bundle.HMR_BUNDLE_ID = "890e741a975ef6c8";
+module.bundle.HMR_BUNDLE_ID = "9de535667274e9d8";
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, chrome, browser, globalThis, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
   HMRAsset,
@@ -531,63 +531,42 @@ function hmrAcceptRun(bundle, id) {
     acceptedAssets[id] = true;
 }
 
-},{}],"8lqZg":[function(require,module,exports) {
-//****************************************Slider****************************************//
+},{}],"DJpjy":[function(require,module,exports) {
 var _main = require("./main");
-const axios = require("axios").default;
-let slideTrack = document.getElementById("slide-track");
-(0, _main.sliderData)().then((result)=>{
-    let slideResult = result;
-    let slideResultCount = slideResult.data.hits.length;
-    if (slideResultCount >= 1) {
-        let TrackHTML = "";
-        for(let i = 0; i < slideResultCount; i++){
-            let slideObject = slideResult.data.hits[i].recipe;
-            TrackHTML += '<div class="slide" id="slide">\n<div class="slide-header slide-image">\n<img alt="" src=' + slideObject.image + ">\n" + "</div>\n" + '<div class="slide-body">\n' + "<p>" + slideObject.label + "</p>\n" + "</div>\n" + '<div class="slide-footer">\n' + '<div class="slfdiv">\n' + "<p>" + Math.trunc(slideObject.calories) + ".Kcal&nbsp;|&nbsp;" + slideObject.ingredients.length + ".Ingredients</p>\n" + "</div>\n" + '<div class="slfdiv">\n' + '<p class="slfdiv"><i class="fa-solid fa-clock-rotate-left"></i>' + slideObject.totalTime + "</p>\n" + "</div>\n" + "</div>\n" + "</div>";
-        }
-        slideTrack.innerHTML = TrackHTML;
+getParameter = (recipeID1)=>{
+    address = window.location.search;
+    parameterList = new URLSearchParams(address);
+    return parameterList.get(recipeID1);
+};
+let recipeID = getParameter("recipeID");
+(0, _main.fetchRecipe)(recipeID).then((result)=>{
+    console.log(result.data.recipe);
+    let recipeDetail = result.data.recipe;
+    let recipeIMG = document.getElementById("recipe-image");
+    let ingredients = document.getElementsByClassName("instructions");
+    let nutrients = document.getElementById("nutrients-table");
+    let labels = document.getElementById("l-box");
+    recipeIMG.innerHTML = "";
+    let recipesIMGHTML = "";
+    recipesIMGHTML += '<div class="recipe-image" id="recipe-image">\n<img alt="" src=' + recipeDetail.image + ">\n" + "</div>";
+    recipeIMG.innerHTML = recipesIMGHTML;
+    //     let recipeIngredients = result.data.recipe.ingredients
+    //     console.log(recipeIngredients)
+    // })
+    ingredients.innerHTML = "";
+    let recipeIngredients = result.data.recipe.ingredients;
+    console.log(recipeIngredients);
+    let recipeIngredientsCount = result.data.recipe.ingredients;
+    if (recipeIngredientsCount >= 1) for(let i = 0; i < recipeIngredientsCount; i++){
+        console.log(recipeIngredientsCount[i].ingredients);
+        let ingredientsObject = recipeIngredientsCount[i].ingredients;
+        console.log(ingredientsObject);
+        let ingredientsHTML = "";
+        ingredientsHTML += "<li>" + ingredientsObject + "</li>";
+        ingredients.innerHTML = ingredientsHTML;
     }
 });
-let mtOpt = document.getElementById("meal-type");
-let csOpt = document.getElementById("cuisine");
-let dtOpt = document.getElementById("diet");
-let tmOpt = document.getElementById("time");
-let userInput = document.getElementById("search");
-let searchSubmit = document.getElementById("search-bttn");
-let searchContainer = document.getElementById("searchresult-inner-container");
-searchSubmit.addEventListener("click", ()=>{
-    let userInputText = userInput.value;
-    let mtOptValue = mtOpt.value;
-    let csOptValue = csOpt.value;
-    let dtOptValue = dtOpt.value;
-    let tmOptValue = tmOpt.value;
-    if (userInputText !== "") (0, _main.fetchData)(userInputText, mtOptValue, csOptValue, dtOptValue, tmOptValue).then((result)=>{
-        searchContainer.innerHTML = "";
-        let recipesResult = result;
-        console.log(recipesResult);
-        let recipesResultCount = recipesResult.data.hits.length;
-        if (recipesResultCount >= 1) {
-            let recipesHTML = "";
-            for(let i = 0; i < recipesResultCount; i++){
-                console.log(recipesResult.data.hits[i].recipe);
-                let recipeObject = recipesResult.data.hits[i].recipe;
-                let recipeDetail = recipeObject.uri;
-                let recipeDetailArray = recipeDetail.split("_");
-                let recipeDetailId = recipeDetailArray[1];
-                console.log(recipeDetailId);
-                recipesHTML += '<a href="recipe-detail.html?recipeID=' + recipeDetailId + '" class="card card-1" id="card">\n' + ' <div class="card-header card-image">\n' + '    <img alt="" src=' + recipeObject.image + ">\n" + "     </div>\n" + ' <div class="card-body">\n' + "     <p>" + recipeObject.label + "</p>\n" + " </div>\n" + ' <div class="card-footer">\n' + "     <p>" + Math.trunc(recipeObject.calories) + ".Kcal&nbsp;|&nbsp;" + recipeObject.ingredients.length + ".Ingredients</p>\n" + '<p><i class="fa-solid fa-clock-rotate-left"></i>&nbsp;' + recipeObject.totalTime + "</p>\n" + " </div>\n" + " </a>";
-            }
-            searchContainer.innerHTML = recipesHTML;
-        }
-    }).catch((reason)=>{
-        alert(reason);
-    });
-    else alert("Please enter a query in searchbar.");
-});
-function clearBox(elementID) {
-    document.getElementById(elementID).innerHTML = "";
-}
 
-},{"./main":"gLLPy","axios":"jo6P5"}]},["ShInH","8lqZg"], "8lqZg", "parcelRequire549b")
+},{"./main":"gLLPy"}]},["iMehg","DJpjy"], "DJpjy", "parcelRequire549b")
 
-//# sourceMappingURL=index.975ef6c8.js.map
+//# sourceMappingURL=recipe-detail.7274e9d8.js.map

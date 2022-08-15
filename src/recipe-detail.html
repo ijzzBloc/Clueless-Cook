@@ -17,7 +17,7 @@
 <header class="header-container">
     <p class="header-item header-item-1">The Clueless Cook</p>
     <div class="header-item header-item-2">
-        <a class="navbar-a" href="home.html">home</a>
+        <a class="navbar-a" href="index.html">home</a>
         <a class="navbar-a" href="recipe-detail.html">about</a>
         <a class="navbar-a" href="calculator.html">calculator</a>
     </div>
@@ -51,22 +51,22 @@
             <div class="instructions">
                 <div class="instructions-header">
                     <h4>Ingredients</h4>
-                    <ul>
-                        <li>lorem ipsum</li>
-                        <li>lorem ipsum</li>
-                        <li>lorem ipsum</li>
-                        <li>lorem ipsum</li>
-                        <li>lorem ipsum</li>
-                        <li>lorem ipsum</li>
-                        <li>lorem ipsum</li>
-                        <li>lorem ipsum</li>
+                    <ul id="instructions" class="instructions">
+<!--                        <li>lorem ipsum</li>-->
+<!--                        <li>lorem ipsum</li>-->
+<!--                        <li>lorem ipsum</li>-->
+<!--                        <li>lorem ipsum</li>-->
+<!--                        <li>lorem ipsum</li>-->
+<!--                        <li>lorem ipsum</li>-->
+<!--                        <li>lorem ipsum</li>-->
+<!--                        <li>lorem ipsum</li>-->
                     </ul>
                 </div>
             </div>
             <div class="nutrients">
                 <div class="nutrients-header">
                     <h4>Nutrients</h4>
-                    <table class="nutrients-table">
+                    <table class="nutrients-table" id="nutrients-table">
                         <tr>
                             <td>Energy</td>
                             <td>1000 Kcal</td>
@@ -100,7 +100,7 @@
                 <div class="labels-header">
                     <h4>Health labels</h4>
                 </div>
-                <div class="l-box">
+                <div class="l-box" id="l-box">
                     <div class="l">
                         <p>Peanut-Free</p>
                     </div>
@@ -126,7 +126,6 @@
                         <p>Tree-Nut-Free</p>
                     </div>
                 </div>
-                </div>
             </section>
         </section>
 </main>
@@ -136,7 +135,6 @@
         <section class="footer-inner-container">
             <div class="footer-item">
                 <h3 class="footer-title">Information</h3>
-                <br>
                 <p>lorem ipsum</p>
                 <p>lorem ipsum</p>
                 <p>lorem ipsum</p>
@@ -144,21 +142,18 @@
             </div>
             <div class="footer-item">
                 <h3 class="footer-title">About</h3>
-                <br>
                 <p>lorem ipsum</p>
                 <p>lorem ipsum</p>
                 <p>lorem ipsum</p>
             </div>
             <div class="footer-item">
                 <h3 class="footer-title">Contact</h3>
-                <br>
                 <p>lorem ipsum</p>
                 <p>lorem ipsum</p>
                 <p>lorem ipsum</p>
             </div>
             <div class="footer-item">
                 <h3 class="footer-title">Social</h3>
-                <br>
                 <a class="fa-brands fa-facebook fa-2xl" href="https://www.facebook.com/"></a>
                 <a class="fa-brands fa-instagram fa-2xl" href="https://www.instagram.com/"></a>
                 <a class="fa-brands fa-linkedin fa-2xl" href="https://www.linkedin.com/"></a>
@@ -168,5 +163,6 @@
     </section>
 </footer>
 <script src="main.js" type="module"></script>
+<script src="recipe-detail.js" type="module"></script>
 </body>
 </html>
