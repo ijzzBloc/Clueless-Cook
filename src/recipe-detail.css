@@ -2,21 +2,16 @@
     min-height: 90vh;
     margin-right: 20%;
     margin-left: 20%;
-    border: green 1px solid;
 }
 
 .recipe-inner-container {
     display: grid;
     grid-template-columns: repeat(2, 50%);
-    /*margin-right: 20%;*/
-    /*margin-left: 20%;*/
     min-height: 100vh;
-    border: yellow 1px solid;
 }
 
 .details {
     color: var(--darkcolor);
-    border: blue 1px solid;
 }
 
 .details-header {
@@ -65,12 +60,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: blue 1px solid;
+}
+.recipe-image img {
+    width:300px;
+    height: auto;
 }
 
 .instructions {
     color: var(--darkcolor);
-    border: blue 1px solid;
 }
 
 .instructions-header {
@@ -84,11 +81,6 @@
     margin-top: 1rem;
     color: inherit;
 }
-
-.nutrients {
-    border: blue 1px solid;
-}
-
 .nutrients-header, h4 {
     margin-top: 1rem;
     color: var(--darkcolor);
@@ -107,16 +99,10 @@
 }
 
 .labels-container {
-    border: 1px red solid;
     margin-top: 1rem;
     margin-left: 20%;
     margin-right: 20%;
 }
-
-.label-inner-container {
-
-}
-
 .labels-header {
     margin-left: 1rem;
     color: var(--darkcolor);
@@ -126,7 +112,6 @@
     display: flex;
     flex-wrap: wrap;
     padding: 1rem;
-    border: 1px red solid;
     width: 100%;
     height: auto;
 }

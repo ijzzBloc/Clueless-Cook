@@ -1,20 +1,17 @@
 .recipe-container {
   min-height: 90vh;
-  border: 1px solid green;
   margin-left: 20%;
   margin-right: 20%;
 }
 
 .recipe-inner-container {
   min-height: 100vh;
-  border: 1px solid #ff0;
   grid-template-columns: repeat(2, 50%);
   display: grid;
 }
 
 .details {
   color: var(--darkcolor);
-  border: 1px solid #00f;
 }
 
 .details-header {
@@ -64,15 +61,18 @@
 }
 
 .recipe-image {
-  border: 1px solid #00f;
   justify-content: center;
   align-items: center;
   display: flex;
 }
 
+.recipe-image img {
+  width: 300px;
+  height: auto;
+}
+
 .instructions {
   color: var(--darkcolor);
-  border: 1px solid #00f;
 }
 
 .instructions-header {
@@ -85,10 +85,6 @@
   color: inherit;
   margin-top: 1rem;
   margin-left: 2rem;
-}
-
-.nutrients {
-  border: 1px solid #00f;
 }
 
 .nutrients-header, h4 {
@@ -109,7 +105,6 @@
 }
 
 .labels-container {
-  border: 1px solid red;
   margin-top: 1rem;
   margin-left: 20%;
   margin-right: 20%;
@@ -123,7 +118,6 @@
 .l-box {
   width: 100%;
   height: auto;
-  border: 1px solid red;
   flex-wrap: wrap;
   padding: 1rem;
   display: flex;

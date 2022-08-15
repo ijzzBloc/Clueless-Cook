@@ -135,7 +135,6 @@
 }
 
 .resultstable {
-    display: flex;
     width: auto;
     /*border-spacing: 2rem;*/
     border: blue;
@@ -147,8 +146,7 @@
 th, td  {
     width: 10rem;
 }
-.totaltable {
-    display: flex;
+#totaltable {
     width: auto;
     /*border-spacing: 2rem;*/
     border: blue;

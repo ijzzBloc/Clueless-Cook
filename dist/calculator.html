@@ -61,39 +61,29 @@
             <div>
                 <p>Serving(s)</p>
             </div>
-            <div class="addbttn">
-                <p class="addbttn">+&nbsp;Add</p>
+            <div id="addbttn" class="addbttn">
+                +&nbsp;Add
             </div>
         </div>
         <div class="kcal-results" id="kcal-results">
             <table class="resultstable">
-                <tr>
-                    <th>Product</th>
-                    <th>Calories</th>
-                    <th>Fat</th>
-                    <th>Carbs</th>
-                </tr>
-                <tr>
-                    <td>Milk</td>
-                    <td>149kcal</td>
-                    <td>8g</td>
-                    <td>12g</td>
-                </tr>
-                <tr>
-                    <td>Mars</td>
-                    <td>234kcal</td>
-                    <td>12g</td>
-                    <td>31g</td>
-                </tr>
+                <thead>
+                <th>Product</th>
+                <th>Calories</th>
+                <th>Fat</th>
+                <th>Carbs</th>
+                </thead>
+                <tbody id="resultstableproducts">
+                </tbody>
             </table>
         </div>
         <div>
-            <table class="totaltable">
+            <table id="totaltable">
                 <tr id="total">
                     <td>Total:</td>
-                    <td>383kcal</td>
-                    <td>20g</td>
-                    <td>43g</td>
+                    <td>0kcal</td>
+                    <td>0g</td>
+                    <td>0g</td>
                 </tr>
             </table>
         </div>

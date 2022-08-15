@@ -144,14 +144,13 @@
   text-align: left;
   border-collapse: collapse;
   border: #00f;
-  display: flex;
 }
 
 th, td {
   width: 10rem;
 }
 
-.totaltable {
+#totaltable {
   width: auto;
   color: var(--darkcolor);
   text-align: left;
@@ -159,7 +158,6 @@ th, td {
   border: #00f;
   border-top: 1px var(--darkcolor) solid;
   padding-bottom: 3vh;
-  display: flex;
 }
 
 /*# sourceMappingURL=calculator.2bc76d9d.css.map */
