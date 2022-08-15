@@ -28,12 +28,32 @@
   color: var(--darkcolor);
   margin-top: 1rem;
   margin-bottom: .9rem;
-  padding-left: .5rem;
 }
 
 .details-header > h3 {
   color: var(--darkcolor);
   padding-right: 4vw;
+}
+
+.fa-clock-rotate-left {
+  padding-right: .5rem;
+}
+
+#article {
+  justify-content: center;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  display: flex;
+}
+
+#article > a {
+  color: var(--darkcolor);
+  background: none;
+  transform: scale(2);
+}
+
+#article > a:hover {
+  color: var(--lighthovercolor);
 }
 
 .recipe-text {
