@@ -37,17 +37,25 @@
 }
 
 #article {
-  color: var(--darkcolor);
-  background: none;
+  background: var(--lightcolor);
+  color: #f5f5f5;
+  max-width: max-content;
+  border-radius: .3rem;
   justify-content: center;
   margin-top: 10%;
   margin-bottom: 10%;
+  margin-left: 35%;
+  padding: .5rem;
   display: flex;
-  transform: scale(2);
 }
 
 #article:hover {
-  color: var(--lighthovercolor);
+  background: var(--lighthovercolor);
+}
+
+#article:active {
+  transition: all .3s;
+  transform: scale(.9);
 }
 
 .recipe-text {
