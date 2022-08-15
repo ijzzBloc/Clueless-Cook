@@ -40,19 +40,16 @@
 }
 
 #article {
-  justify-content: center;
-  padding-top: 10%;
-  padding-bottom: 10%;
-  display: flex;
-}
-
-#article > a {
   color: var(--darkcolor);
   background: none;
+  justify-content: center;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  display: flex;
   transform: scale(2);
 }
 
-#article > a:hover {
+#article:hover {
   color: var(--lighthovercolor);
 }
 

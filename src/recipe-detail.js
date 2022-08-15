@@ -22,7 +22,8 @@ fetchRecipe(recipeID).then((result) => {
     let recipeHeaderHTML = ""
     recipeHeaderHTML +=
         '<h3>' + recipeDetail.label + '</h3>\n' +
-        '<p><i class="fa-solid fa-clock-rotate-left"></i>' + recipeDetail.totalTime + 'mins.</p >'
+        '<p><i class="fa-solid fa-clock-rotate-left"></i>' + recipeDetail.totalTime + 'mins.</p >\n' +
+        '<a href=' + recipeDetail.url + 'id="article">Original Article</a>'
     recipeHeader.innerHTML = recipeHeaderHTML;
 
 

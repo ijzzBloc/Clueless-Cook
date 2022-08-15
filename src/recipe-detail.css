@@ -42,20 +42,15 @@
 #article {
     display: flex;
     justify-content: center;
-    padding-top: 10%;
-    padding-bottom: 10%;
-}
-
-#article > a {
+    margin-top: 10%;
+    margin-bottom: 10%;
     background: none;
     color: var(--darkcolor);
     transform: scale(200%);
 }
-
-#article > a:hover {
+#article:hover  {
     color: var(--lighthovercolor);
 }
-
 .recipe-text {
     margin-left: 1rem;
     color: inherit;

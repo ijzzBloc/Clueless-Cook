@@ -550,7 +550,7 @@ let recipeID = getParameter("recipeID");
     let labels = document.getElementById("l-box");
     recipeHeader.innerHTML = "";
     let recipeHeaderHTML = "";
-    recipeHeaderHTML += "<h3>" + recipeDetail.label + "</h3>\n" + '<p><i class="fa-solid fa-clock-rotate-left"></i>' + recipeDetail.totalTime + "mins.</p >";
+    recipeHeaderHTML += "<h3>" + recipeDetail.label + "</h3>\n" + '<p><i class="fa-solid fa-clock-rotate-left"></i>' + recipeDetail.totalTime + "mins.</p >\n" + "<a href=" + recipeDetail.url + 'id="article">Original Article</a>';
     recipeHeader.innerHTML = recipeHeaderHTML;
     recipeIMG.innerHTML = "";
     let recipesIMGHTML = "";
