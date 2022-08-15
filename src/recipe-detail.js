@@ -23,10 +23,10 @@ fetchRecipe(recipeID).then((result) => {
     recipeHeader.innerHTML = ""
     let recipeHeaderHTML =
         '<div class="details">\n' +
-        '<div class="details-header">\n'+
+        '<div class="details-header">\n' +
         '<h3>' + recipeDetail.label + '</h3>\n' +
         '<p><i class="fa-solid fa-clock-rotate-left"></i>' + recipeDetail.totalTime + 'mins.</p >\n' +
-        '</div>\n'+
+        '</div>\n' +
         '<div class="recipe-text">\n' +
         '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A culpa cum doloribus eligendi eveniet\n' +
         '                        harum ipsa itaque, magni provident quae quas quisquam quod quos recusandae reiciendis sit\n' +
@@ -40,8 +40,8 @@ fetchRecipe(recipeID).then((result) => {
         '                        dicta, eos est eveniet facere harum id, libero perferendis quaerat quas qui quidem quisquam ut\n' +
         '                        vel vitae voluptate.</p>\n' +
         '<a id="article" href=' + recipeDetail.url + '>Original Article</a>\n' +
-        '</div>'
-        '</div>'
+        '</div>\n' +
+    '</div>'
     //Replace html with filled whtml
     recipeHeader.innerHTML = recipeHeaderHTML;
 

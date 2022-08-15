@@ -13,7 +13,7 @@ sliderData().then((result) => {
         for (let i = 0; i < slideResultCount; i++) {
             let slideObject = slideResult.data.hits[i].recipe;
             TrackHTML +=
-                '<div class="slide" id="slide">\n' +
+                '<a href=' + slideObject.url + ' class="slide" id="slide">\n' +
                 '<div class="slide-header slide-image">\n' +
                 '<img alt="" src=' + slideObject.image + '>\n' +
                 '</div>\n' +
@@ -28,7 +28,7 @@ sliderData().then((result) => {
                 '<p class="slfdiv"><i class="fa-solid fa-clock-rotate-left"></i>' + slideObject.totalTime + '</p>\n' +
                 '</div>\n' +
                 '</div>\n' +
-                '</div>'
+                '</a>'
         }
         slideTrack.innerHTML = TrackHTML;
     }

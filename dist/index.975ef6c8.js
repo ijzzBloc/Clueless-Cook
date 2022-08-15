@@ -543,7 +543,7 @@ let slideTrack = document.getElementById("slide-track");
         let TrackHTML = "";
         for(let i = 0; i < slideResultCount; i++){
             let slideObject = slideResult.data.hits[i].recipe;
-            TrackHTML += '<div class="slide" id="slide">\n<div class="slide-header slide-image">\n<img alt="" src=' + slideObject.image + ">\n" + "</div>\n" + '<div class="slide-body">\n' + "<p>" + slideObject.label + "</p>\n" + "</div>\n" + '<div class="slide-footer">\n' + '<div class="slfdiv">\n' + "<p>" + Math.trunc(slideObject.calories) + ".Kcal&nbsp;|&nbsp;" + slideObject.ingredients.length + ".Ingredients</p>\n" + "</div>\n" + '<div class="slfdiv">\n' + '<p class="slfdiv"><i class="fa-solid fa-clock-rotate-left"></i>' + slideObject.totalTime + "</p>\n" + "</div>\n" + "</div>\n" + "</div>";
+            TrackHTML += "<a href=" + slideObject.url + ' class="slide" id="slide">\n' + '<div class="slide-header slide-image">\n' + '<img alt="" src=' + slideObject.image + ">\n" + "</div>\n" + '<div class="slide-body">\n' + "<p>" + slideObject.label + "</p>\n" + "</div>\n" + '<div class="slide-footer">\n' + '<div class="slfdiv">\n' + "<p>" + Math.trunc(slideObject.calories) + ".Kcal&nbsp;|&nbsp;" + slideObject.ingredients.length + ".Ingredients</p>\n" + "</div>\n" + '<div class="slfdiv">\n' + '<p class="slfdiv"><i class="fa-solid fa-clock-rotate-left"></i>' + slideObject.totalTime + "</p>\n" + "</div>\n" + "</div>\n" + "</a>";
         }
         slideTrack.innerHTML = TrackHTML;
     }
