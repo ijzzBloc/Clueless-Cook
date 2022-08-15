@@ -10,11 +10,23 @@ getParameter = (recipeID) => {
 let recipeID = (getParameter('recipeID'))
 fetchRecipe(recipeID).then((result) => {
     console.log(result.data.recipe)
+    let article = document.getElementById('article')
+    let recipeHeader = document.getElementById('details-header')
     let recipeDetail = result.data.recipe
     let recipeIMG = document.getElementById('recipe-image')
     let ingredients = document.getElementById('instructions')
     let nutrients = document.getElementById('nutrients-table')
     let labels = document.getElementById('l-box')
+
+    recipeHeader.innerHTML = ""
+    let recipeHeaderHTML = ""
+    recipeHeaderHTML +=
+        '<h3>' + recipeDetail.label + '</h3>\n' +
+        '<p><i class="fa-solid fa-clock-rotate-left"></i>20 mins.</p >'
+    recipeHeader.innerHTML = recipeHeaderHTML;
+
+
+
     recipeIMG.innerHTML = ""
     let recipesIMGHTML = ""
     recipesIMGHTML +=
@@ -22,11 +34,6 @@ fetchRecipe(recipeID).then((result) => {
         '<img alt="" src=' + recipeDetail.image + '>\n' +
         '</div>'
     recipeIMG.innerHTML = recipesIMGHTML;
-
-
-
-
-
 
 
     ingredients.innerHTML = ""
@@ -38,10 +45,11 @@ fetchRecipe(recipeID).then((result) => {
             let ingredientsObject = result.data.recipe.ingredients[i]
             console.log(ingredientsObject)
             ingredientsHTML +=
-                    '<li>' + ingredientsObject.text + '</li>'
+                '<li>' + ingredientsObject.text + '</li>'
         }
         ingredients.innerHTML = ingredientsHTML
     }
+
 })
 
 
