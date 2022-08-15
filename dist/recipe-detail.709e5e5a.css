@@ -106,8 +106,9 @@
 
 .nutrients-table, tr, td {
   border-collapse: collapse;
-  min-width: 15vw;
-  color: #000;
+  min-width: 7vw;
+  color: var(--darkcolor);
+  border-bottom: var(--darkcolor) 1px solid;
   margin-top: 1rem;
   margin-left: 1rem;
 }

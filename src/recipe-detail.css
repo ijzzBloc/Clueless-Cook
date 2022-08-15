@@ -101,8 +101,9 @@
     border-collapse: collapse;
     margin-top: 1rem;
     margin-left: 1rem;
-    min-width: 15vw;
-    color: black;
+    min-width: 7vw;
+    color: var(--darkcolor);
+    border-bottom: var(--darkcolor) 1px solid;
 }
 
 .labels-container {
