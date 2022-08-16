@@ -536,7 +536,7 @@ var _main = require("./main");
 let calcInput = document.getElementById("kcalsearch");
 let calcSubmit = document.getElementById("kcal-search-bttn");
 let infoContainer = document.getElementById("info-container");
-let addbttn = document.getElementById("addbttn");
+let addBttn = document.getElementById("addbttn");
 let servingamount = document.getElementById("servingamount");
 let resultstableproducts = document.getElementById("resultstableproducts");
 let totaltable = document.getElementById("totaltable");
@@ -560,7 +560,7 @@ calcSubmit.addEventListener("click", ()=>{
     });
     else alert("Please enter a product in searchbar.");
 });
-addbttn.addEventListener("click", ()=>{
+addBttn.addEventListener("click", ()=>{
     if (foundIngredient != null || servingamount.value === "") {
         doCalc(foundIngredient);
         resultstableproducts.innerHTML = "";
@@ -600,9 +600,6 @@ function doCalc(ingredientResult) {
 function addIngredients(ingredient, amount) {
     ingredient.amount = amount;
     ingredients.push(ingredient);
-}
-function clearBox(elementID) {
-    document.getElementById(elementID).innerHTML = "";
 }
 
 },{"./main":"gLLPy"}]},["gyELQ","9WiAu"], "9WiAu", "parcelRequire549b")

@@ -3,7 +3,7 @@ import {calcData} from "./main";
 let calcInput = document.getElementById('kcalsearch');
 let calcSubmit = document.getElementById('kcal-search-bttn')
 let infoContainer = document.getElementById('info-container')
-let addbttn = document.getElementById('addbttn')
+let addBttn = document.getElementById('addbttn')
 let servingamount = document.getElementById('servingamount')
 let resultstableproducts = document.getElementById('resultstableproducts')
 let totaltable = document.getElementById('totaltable')
@@ -48,8 +48,8 @@ calcSubmit.addEventListener('click', () => {
     }
 })
 
-addbttn.addEventListener('click', () => {
-    if(foundIngredient != null || servingamount.value === '') {
+addBttn.addEventListener('click', () => {
+    if (foundIngredient != null || servingamount.value === '') {
         doCalc(foundIngredient);
         resultstableproducts.innerHTML = ''
         let newTableResult = ''
@@ -88,10 +88,11 @@ addbttn.addEventListener('click', () => {
         foundIngredient = null;
         calcInput.value = '';
         servingamount.value = ''
-        infoContainer.innerHTML = "";
+        infoContainer.innerHTML = '';
     }
 
 });
+
 
 function doCalc(ingredientResult) {
     if (ingredientResult != null) {
@@ -108,8 +109,4 @@ function doCalc(ingredientResult) {
 function addIngredients(ingredient, amount) {
     ingredient.amount = amount
     ingredients.push(ingredient);
-}
-
-function clearBox(elementID) {
-    document.getElementById(elementID).innerHTML = "";
 }
