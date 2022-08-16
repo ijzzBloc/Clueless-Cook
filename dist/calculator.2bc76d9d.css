@@ -7,7 +7,6 @@
 .kcal-inner-container {
   height: auto;
   width: auto;
-  border: 1px solid #00f;
   flex-direction: column;
   margin-left: 20%;
   padding-top: 3.5vh;
@@ -29,8 +28,8 @@
 
 .kcalsearchbox {
   height: 3rem;
+  border: var(--darkcolor) 1px solid;
   width: max-content;
-  border: 1px solid #000;
   border-radius: .3rem;
   justify-content: flex-start;
   align-items: center;
@@ -76,6 +75,7 @@
 }
 
 .searchbttn:active {
+  cursor: wait;
   transform: scale(.85);
 }
 
@@ -95,7 +95,7 @@
   height: 40px;
   width: 6rem;
   text-align: center;
-  border: 1px solid #000;
+  border: var(--darkcolor) 1px solid;
   border-radius: .3rem;
   outline: 0;
 }
@@ -115,6 +115,7 @@
 }
 
 .addbttn:active {
+  cursor: wait;
   transform: scale(.85);
 }
 
