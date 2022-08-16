@@ -36,7 +36,7 @@ calcSubmit.addEventListener('click', () => {
             infoContainer.innerHTML = kcalHTML;
             let ingredients = [];
             let counter = 1;
-            let ingriedentResult =
+            let ingredientResult =
                 {
                     "food": {
                         "label": kcalObject[0].food.label
@@ -48,25 +48,25 @@ calcSubmit.addEventListener('click', () => {
                         "label": kcalObject[0].measure.label
                     },
                 }
-            console.log(ingriedentResult)
+            console.log(ingredientResult)
             addbttn.addEventListener('click', () => {
-                doCalc();
+                doCalc(servingamount);
                 resultstableproducts.innerHTML = ''
                 let newTableResult = ''
                 let ingredientsKcal = 0;
                 let ingredientsFat = 0;
                 let ingredientsCarbs = 0;
                 for (let i = 0; i < ingredients.length; i++) {
-                    let totalKcal = +ingredients[i].amount * +ingredients[i].calories;
-                    let totalFat = +ingredients[i].amount * +ingredients[i].fat;
-                    let totalCarbs = +ingredients[i].amount * +ingredients[i].carbs;
+                    let totalKcal = +ingredients[i].amount * +kcalObject[0].food.nutrients.ENERC_KCAL;
+                    let totalFat = +ingredients[i].amount * +kcalObject[0].food.nutrients.FAT;
+                    let totalCarbs = +ingredients[i].amount * +kcalObject[0].food.nutrients.FIBTG;
                     ingredientsKcal += totalKcal
                     ingredientsFat += totalFat
                     ingredientsCarbs += totalCarbs
 
                     newTableResult +=
                         '<tr>' +
-                        '    <td>'+ingredients[i].food.label+'</td>' +
+                        '    <td>'+kcalObject[0].food.label+'</td>' +
                         '    <td>'+totalKcal+'</td>' +
                         '    <td>'+totalFat+'</td>' +
                         '    <td>'+totalCarbs+'</td>' +
