@@ -26,6 +26,7 @@
     overflow: hidden;
     position: relative;
     display: grid;
+    min-height: 20vh;
 }
 
 .slider-container::before, .slider-container::after {
@@ -252,7 +253,7 @@
 
 /*------------------------------Search results--------------------------------------*/
 .searchresult-container {
-    min-height: 20vh;
+    min-height: 30vh;
 }
 
 .searchresult-inner-container {

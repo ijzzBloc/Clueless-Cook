@@ -18,6 +18,7 @@
 
 .slider-container {
   height: auto;
+  min-height: 20vh;
   place-items: center;
   margin-left: 20%;
   margin-right: 20%;
@@ -248,7 +249,7 @@
 }
 
 .searchresult-container {
-  min-height: 20vh;
+  min-height: 30vh;
 }
 
 .searchresult-inner-container {
