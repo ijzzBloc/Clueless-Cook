@@ -8,6 +8,8 @@ let servingamount = document.getElementById('servingamount')
 let resultstableproducts = document.getElementById('resultstableproducts')
 let totaltable = document.getElementById('totaltable')
 
+
+
 calcSubmit.addEventListener('click', () => {
     let calcInputText = calcInput.value;
     if (calcInputText !== "") {
@@ -54,7 +56,6 @@ calcSubmit.addEventListener('click', () => {
         alert('Please enter a product in searchbar.')
     }
 })
-
 let ingredients = [];
 let counter = 1;
 function doCalc(ingredientResult) {
@@ -69,6 +70,9 @@ function addIngredients(ingredient, amount) {
     ingredient["amount"] = parseInt(amount);
     ingredients.push(ingredient);
 }
+
+
+
 
 addbttn.addEventListener('click', () => {
     doCalc(servingamount);
@@ -105,6 +109,15 @@ addbttn.addEventListener('click', () => {
         '    <td>'+ingredientsCarbs+'</td>' +
         '</tr>'
 });
+
+
+
+
+
+
+
+
+
 
 function clearBox(elementID) {
     document.getElementById(elementID).innerHTML = "";

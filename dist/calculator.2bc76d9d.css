@@ -58,9 +58,12 @@
 .searchbttn {
   background-color: var(--lightcolor);
   width: 8rem;
+  color: #f5f5f5;
+  text-shadow: 0 0 5px var(--darkcolor), 0 0 5px var(--darkcolor);
   border-radius: .3rem;
   justify-content: center;
   align-items: center;
+  font-size: 1em;
   display: flex;
 }
 
@@ -107,10 +110,13 @@
 .addbttn {
   background-color: var(--lightcolor);
   width: 5rem;
+  color: #f5f5f5;
+  text-shadow: 0 0 5px var(--darkcolor), 0 0 5px var(--darkcolor);
   border-radius: .3rem;
   justify-content: center;
   align-items: center;
   padding: .2rem;
+  font-size: 1em;
   display: flex;
 }
 

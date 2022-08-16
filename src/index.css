@@ -233,6 +233,9 @@
     border-radius: 0.3rem;
     background: var(--lightcolor);
     border: rgb(0, 0, 0, 30%) 1px solid;
+    color: whitesmoke;
+    text-shadow: 0 0 5px var(--darkcolor), 0 0 5px var(--darkcolor);
+    font-size: 1em;
 }
 
 .searh-bttn > p, i {
