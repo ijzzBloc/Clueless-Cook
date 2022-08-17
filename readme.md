@@ -41,7 +41,8 @@ After making a selection simply click on a recipe.
 You will now be directed towards a new page containing more "details" about the chosen recipe.
 Here you will find a description, a link to the original article by the original author, an ingredient list, a list of nutrients and health labels associated with the recipe.
 ***
-###Calculator
+Calculator:
+
 To use the calculator:
  1. Type in a product into the search field. **NOTE**: You can only enter 1 product at a time and for best results always add in a unit of measurement. e.g '100 gram of beef', '100 lbs of salmon' or 2 apples. The 2 referring to whole units of apple.
  2. Click the search button
