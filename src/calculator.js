@@ -4,9 +4,9 @@ let calcInput = document.getElementById('kcalsearch');
 let calcSubmit = document.getElementById('kcal-search-bttn')
 let infoContainer = document.getElementById('info-container')
 let addBttn = document.getElementById('addbttn')
-let servingamount = document.getElementById('servingamount')
-let resultstableproducts = document.getElementById('resultstableproducts')
-let totaltable = document.getElementById('totaltable')
+let servingAmount = document.getElementById('servingamount')
+let resultsTableProducts = document.getElementById('resultstableproducts')
+let totalTable = document.getElementById('totaltable')
 let ingredients = [];
 let test = "";
 let foundIngredient = null;
@@ -49,23 +49,26 @@ calcSubmit.addEventListener('click', () => {
 })
 
 addBttn.addEventListener('click', () => {
-    if (foundIngredient != null || servingamount.value === '') {
+    if (foundIngredient != null || servingAmount.value === '') {
         doCalc(foundIngredient);
-        resultstableproducts.innerHTML = ''
+        resultsTableProducts.innerHTML = ''
         let newTableResult = ''
         let ingredientsLabel = ''
         let ingredientsKcal = 0;
         let ingredientsFat = 0;
         let ingredientsCarbs = 0;
+        let ingredientsProtein = 0;
         for (let i = 0; i < ingredients.length; i++) {
             let productName = ingredients[i].food.label
             let totalKcal = ingredients[i].amount * +ingredients[i].food.nutrients.ENERC_KCAL;
             let totalFat = ingredients[i].amount * +ingredients[i].food.nutrients.FAT;
             let totalCarbs = ingredients[i].amount * +ingredients[i].food.nutrients.FIBTG;
+            let totalProtein = ingredients[i].amount * +ingredients[i].food.nutrients.PROCNT;
             ingredientsLabel = productName
             ingredientsKcal += totalKcal
             ingredientsFat += totalFat
             ingredientsCarbs += totalCarbs
+            ingredientsProtein += totalProtein
             console.log(test)
             newTableResult +=
                 '<tr>' +
@@ -73,20 +76,22 @@ addBttn.addEventListener('click', () => {
                 '    <td>' + totalKcal + '</td>' +
                 '    <td>' + totalFat + '</td>' +
                 '    <td>' + totalCarbs + '</td>' +
+                '    <td>' + totalProtein + '</td>' +
                 '</tr>'
         }
-        resultstableproducts.innerHTML = newTableResult
-        totaltable.innerHTML =
+        resultsTableProducts.innerHTML = newTableResult
+        totalTable.innerHTML =
             '<tr>' +
             '    <td>Total:</td>' +
             '    <td>' + ingredientsKcal + '</td>' +
             '    <td>' + ingredientsFat + '</td>' +
             '    <td>' + ingredientsCarbs + '</td>' +
+            '    <td>' + ingredientsProtein + '</td>' +
             '</tr>'
 
         foundIngredient = null;
         calcInput.value = '';
-        servingamount.value = ''
+        servingAmount.value = ''
         infoContainer.innerHTML = '';
     }
 
@@ -95,7 +100,7 @@ addBttn.addEventListener('click', () => {
 
 function doCalc(ingredientResult) {
     if (ingredientResult != null) {
-        addIngredients(ingredientResult, servingamount.value)
+        addIngredients(ingredientResult, servingAmount.value)
         console.log(ingredients);
         counter++;
 
