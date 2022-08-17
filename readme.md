@@ -1,13 +1,16 @@
 ***
-#The website provides 2 key features.
+The website provides 2 key features.
 * A recipe search function to find recipes based on user selection
 * A calculator for counting calories and macro nutrients based on user selected products.
-###In the top right corner you can find navigation links which will direct you towards the homepage, about page or the Kcal Calculator.
-###This navigation bar will be accessible throughout the entire website.
-###All the way down on the bottom you can find all the information associated with us and direct links to our social media pages.
- * ***
-###Homepage
-<br/>
+
+In the top right corner you can find navigation links which will direct you towards the homepage, about page or the Kcal Calculator.
+
+This navigation bar will be accessible throughout the entire website.
+
+All the way down on the bottom you can find all the information associated with us and direct links to our social media pages.
+***
+Homepage:
+
 The homepage is used to look for and find cooking recipes.
 
 If you wish to do so you can try out one of our monthly recommended recipes.
