@@ -541,7 +541,6 @@ let servingAmount = document.getElementById("servingamount");
 let resultsTableProducts = document.getElementById("resultstableproducts");
 let totalTable = document.getElementById("totaltable");
 let ingredients = [];
-let test = "";
 let foundIngredient = null;
 let counter = 0;
 calcSubmit.addEventListener("click", ()=>{
@@ -581,11 +580,10 @@ addBttn.addEventListener("click", ()=>{
             ingredientsFat += totalFat;
             ingredientsCarbs += totalCarbs;
             ingredientsProtein += totalProtein;
-            console.log(test);
             newTableResult += "<tr>    <td>" + productName + "</td>" + "    <td>" + totalKcal + "</td>" + "    <td>" + totalFat + "</td>" + "    <td>" + totalCarbs + "</td>" + "    <td>" + totalProtein + "</td>" + "</tr>";
         }
         resultsTableProducts.innerHTML = newTableResult;
-        totalTable.innerHTML = "<tr>    <td>Total:</td>    <td>" + ingredientsKcal + "</td>" + "    <td>" + ingredientsFat + "</td>" + "    <td>" + ingredientsCarbs + "</td>" + "    <td>" + ingredientsProtein + "</td>" + "</tr>";
+        totalTable.innerHTML = "<tr>    <td>Total:</td>    <td>" + Math.trunc(ingredientsKcal) + "</td>" + "    <td>" + Math.trunc(ingredientsFat) + "</td>" + "    <td>" + Math.trunc(ingredientsCarbs) + "</td>" + "    <td>" + Math.trunc(ingredientsProtein) + "</td>" + "</tr>";
         foundIngredient = null;
         calcInput.value = "";
         servingAmount.value = "";
