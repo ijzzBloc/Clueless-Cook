@@ -36,8 +36,23 @@
     padding-left: 1rem;
     padding-right: 1rem;
     border-radius: 0.3rem;
+    position: relative;
 }
-
+.kcalsearchbox::before {
+    content: attr(data-tooltip);
+    height: 1.5rem;
+    width: max-content;
+    color: var(--darkcolor);
+    background: white;
+    position: absolute;
+    top: -2rem;
+    left: -8vw;
+    visibility: hidden;
+    transition: 0.1s;
+}
+.kcalsearchbox:hover::before {
+    visibility: visible;
+}
 #kcalsearch {
     border: none;
     height: 38px;
