@@ -583,7 +583,6 @@ addBttn.addEventListener("click", ()=>{
         }
         resultstableproducts.innerHTML = newTableResult;
         totaltable.innerHTML = "<tr>    <td>Total:</td>    <td>" + ingredientsKcal + "</td>" + "    <td>" + ingredientsFat + "</td>" + "    <td>" + ingredientsCarbs + "</td>" + "</tr>";
-        //reset current selected product
         foundIngredient = null;
         calcInput.value = "";
         servingamount.value = "";

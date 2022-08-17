@@ -18,7 +18,7 @@ sliderData().then((result) => {
                 '<img alt="" src=' + slideObject.image + '>\n' +
                 '</div>\n' +
                 '<div class="slide-body">\n' +
-                '<p>' + slideObject.label +'</p>\n' +
+                '<p>' + slideObject.label + '</p>\n' +
                 '</div>\n' +
                 '<div class="slide-footer">\n' +
                 '<div class="slfdiv">\n' +
@@ -37,6 +37,7 @@ sliderData().then((result) => {
 import {
     fetchData
 } from "./main"
+
 let mtOpt = document.getElementById("meal-type");
 let csOpt = document.getElementById("cuisine");
 let dtOpt = document.getElementById("diet");
@@ -74,7 +75,7 @@ searchSubmit.addEventListener('click', () => {
                         '     <p>' + recipeObject.label + '</p>\n' +
                         ' </div>\n' +
                         ' <div class="card-footer">\n' +
-                        '     <p>' + Math.trunc(recipeObject.calories) +'.Kcal&nbsp;|&nbsp;' + recipeObject.ingredients.length + '.Ingredients</p>\n' +
+                        '     <p>' + Math.trunc(recipeObject.calories) + '.Kcal&nbsp;|&nbsp;' + recipeObject.ingredients.length + '.Ingredients</p>\n' +
                         '<p><i class="fa-solid fa-clock-rotate-left"></i>&nbsp;' + recipeObject.totalTime + '</p>\n' +
                         ' </div>\n' +
                         ' </a>'

@@ -84,7 +84,6 @@ addBttn.addEventListener('click', () => {
             '    <td>' + ingredientsCarbs + '</td>' +
             '</tr>'
 
-        //reset current selected product
         foundIngredient = null;
         calcInput.value = '';
         servingamount.value = ''

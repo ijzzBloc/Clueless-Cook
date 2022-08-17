@@ -80,6 +80,7 @@
 .recipe-image img {
   width: 300px;
   height: auto;
+  border-radius: .3rem;
 }
 
 .instructions {
@@ -111,7 +112,6 @@
   border-collapse: collapse;
   min-width: 7vw;
   color: var(--darkcolor);
-  border-bottom: var(--darkcolor) 1px solid;
   margin-top: 1rem;
   margin-left: 1rem;
 }
@@ -125,6 +125,7 @@
 .labels-header {
   color: var(--darkcolor);
   margin-left: 1rem;
+  padding-top: 3rem;
 }
 
 .l-box {
